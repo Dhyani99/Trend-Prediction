@@ -11,7 +11,7 @@ import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.servlet.ModelAndView;
 
-import com.demo.model.DomainVO;
+import com.demo.model.StateVO;
 import com.tp.model.DomainVO;
 import com.tp.service.DomainService;
 
@@ -42,12 +42,14 @@ public class DomainController {
 	}
 	
 	@RequestMapping(value="editDomain", method=RequestMethod.GET)
-	public ModelAndView findByIdDomain(@ModelAttribute DomainVO domainVO, @RequestParam int id, Model model)
+	public ModelAndView editDomain(@ModelAttribute DomainVO domainVO, @RequestParam int findById, Model model)
 	{
-		domainVO.setId(id);
-		List ls=this.domainService.findByIdDomain(domainVO);
-		model.addAttribute("domainVO",(DomainVO) ls.get(0));
-		return new ModelAndView("addDomain");
+		stateVO.setId(id);
+		List ls=this.stateService.edit(stateVO);
+		List ls1=this.countryService.search();
+		model.addAttribute("CountryList",ls1);
+		model.addAttribute("StateVO",(StateVO) ls.get(0));
+		return new ModelAndView("addState");
 		
 	
 	}

@@ -46,7 +46,7 @@ public class DomainController {
 	{
 		domainVO.setId(id);
 		List ls=this.domainService.findByIdDomain(domainVO);
-		model.addAttribute("domainVO",(DomainVO) ls.get(0));
+		model.addAttribute("DomainVO",(DomainVO) ls.get(0));
 		return new ModelAndView("addDomain");
 		
 	
