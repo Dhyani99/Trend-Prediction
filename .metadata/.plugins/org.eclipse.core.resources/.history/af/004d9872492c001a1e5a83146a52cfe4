@@ -1,0 +1,8 @@
+package com.tp.service;
+
+import com.tp.model.DatasetVO;
+
+public interface DomainService {
+
+	public void insertDomain(DomainVO domainVO);
+}

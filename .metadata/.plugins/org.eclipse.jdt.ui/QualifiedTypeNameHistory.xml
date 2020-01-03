@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<qualifiedTypeNameHistroy>
+<fullyQualifiedTypeName name="org.springframework.beans.factory.annotation.Autowired"/>
+<fullyQualifiedTypeName name="com.tp.DAO.DatasetDAO"/>
+<fullyQualifiedTypeName name="com.tp.DAO.DomainDAO"/>
+<fullyQualifiedTypeName name="com.tp.service.DatasetService"/>
+<fullyQualifiedTypeName name="com.tp.model.DatasetVO"/>
+<fullyQualifiedTypeName name="com.tp.model.DomainVO"/>
+<fullyQualifiedTypeName name="org.springframework.stereotype.Controller"/>
+<fullyQualifiedTypeName name="org.springframework.ui.Model"/>
+<fullyQualifiedTypeName name="com.tp.service.DomainService"/>
+</qualifiedTypeNameHistroy>

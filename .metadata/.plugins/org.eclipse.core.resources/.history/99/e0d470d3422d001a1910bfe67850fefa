@@ -1,0 +1,15 @@
+package com.tp.service;
+
+import java.util.List;
+
+import com.tp.model.DatasetVO;
+import com.tp.model.DomainVO;
+
+public interface DomainService {
+
+	public void insertDomain(DomainVO domainVO);
+	
+	public List searchDomain();
+	
+	public List editDomain(DomainVO domainVO);
+}

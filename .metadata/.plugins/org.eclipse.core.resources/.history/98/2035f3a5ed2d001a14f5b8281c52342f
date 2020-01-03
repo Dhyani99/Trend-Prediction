@@ -1,0 +1,14 @@
+package com.tp.dao;
+
+import java.util.List;
+
+import com.tp.model.KeywordVO;
+
+public interface KeywordDAO {
+	
+	public void insertKeyword(KeywordVO keywordVO);
+	
+	public List searchKeyword();
+	
+	public List editKeyword(KeywordVO keywordVO);
+}
