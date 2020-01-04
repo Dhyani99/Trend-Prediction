@@ -225,7 +225,7 @@
 								<tr>
 									<td>${i.domainName}</td>
 									<td>${i.domainDescription}</td>
-									<td><a href="editKeyword.html?findById=${i.id}"><i class="menu-icon fa fa-edit" aria-hidden="true"></i></a><c:out value=" "></c:out>&nbsp&nbsp&nbsp&nbsp<a href="deleteKeyword.html?findById=${i.id}"><i class="menu-icon fa fa-trash-alt" aria-hidden="true"></i></a></td>
+									<td><a href="editDomain.html?id=${i.id}"><i class="menu-icon fa fa-edit" aria-hidden="true"></i></a><c:out value=" "></c:out>&nbsp&nbsp&nbsp&nbsp<a href="deleteDomain.html?id=${i.id}"><i class="menu-icon fa fa-trash-alt" aria-hidden="true"></i></a></td>
 								</tr>
 							</c:forEach>
 							</tbody>

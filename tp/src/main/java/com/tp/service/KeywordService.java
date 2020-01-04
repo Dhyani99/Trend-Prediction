@@ -10,5 +10,5 @@ public interface KeywordService {
 	
 	public List searchKeyword();
 	
-	public List editKeyword(KeywordVO keywordVO);
+	public List findByIdKeyword(KeywordVO keywordVO);
 }

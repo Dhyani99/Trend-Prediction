@@ -11,7 +11,7 @@ import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.servlet.ModelAndView;
 
-import com.demo.model.DomainVO;
+
 import com.tp.model.DomainVO;
 import com.tp.service.DomainService;
 
@@ -47,10 +47,22 @@ public class DomainController {
 		domainVO.setId(id);
 		List ls=this.domainService.findByIdDomain(domainVO);
 		model.addAttribute("domainVO",(DomainVO) ls.get(0));
-		return new ModelAndView("addDomain");
-		
-	
+		return new ModelAndView("admin/addDomain");
 	}
+	
+	@RequestMapping(value="deleteDomain", method=RequestMethod.GET)
+	public ModelAndView deleteDomain(@ModelAttribute DomainVO domainVO, @RequestParam int id)
+	{
+		domainVO.setId(id);
+		List editList=this.domainService.findByIdDomain(domainVO);
+		DomainVO domainVOFromList=(DomainVO) editList.get(0);
+		domainVOFromList.setStatus(false);
+		this.domainService.insertDomain(domainVOFromList);
+		return new ModelAndView("redirect:/viewDomain");
+	}
+	
+	
+	
 	
 	
 }

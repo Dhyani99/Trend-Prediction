@@ -2,14 +2,17 @@
 <section name="Workbench">
 	<section name="org.eclipse.ui.texteditor.FindReplaceDialog">
 		<item value="false" key="isRegEx"/>
-		<item value="Domain" key="selection"/>
+		<item value="findById" key="selection"/>
 		<item value="false" key="casesensitive"/>
 		<item value="false" key="incremental"/>
 		<item value="true" key="wrap"/>
 		<item value="false" key="wholeword"/>
 		<list key="findhistory">
+			<item value="edit"/>
+			<item value="State"/>
 			<item value="Dataset"/>
 			<item value="domain"/>
+			<item value="Keyword"/>
 			<item value="D"/>
 			<item value="entityManagerFactory"/>
 			<item value="User"/>
@@ -20,12 +23,11 @@
 			<item value="&lt;label for=&quot;rememberme&quot;&gt;Remember me&lt;/label&gt;"/>
 			<item value="facebook"/>
 			<item value="Ninja"/>
-			<item value="Admin"/>
-			<item value="ninja"/>
-			<item value=".html"/>
 		</list>
 		<list key="replacehistory">
+			<item value="findById"/>
 			<item value="Domain"/>
+			<item value="Keyword"/>
 		</list>
 	</section>
 	<section name="org.eclipse.ui.texteditor.FindReplaceDialog_dialogBounds">

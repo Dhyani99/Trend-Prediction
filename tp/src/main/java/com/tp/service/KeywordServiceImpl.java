@@ -26,9 +26,9 @@ public class KeywordServiceImpl implements KeywordService{
 		return this.KeywordDAO.searchKeyword();
 	}
 		
-	public List editKeyword(KeywordVO keywordVO)
+	public List findByIdKeyword(KeywordVO keywordVO)
 	{
-		return this.KeywordDAO.editKeyword(keywordVO);
+		return this.KeywordDAO.findByIdKeyword(keywordVO);
 	}
 
 }
