@@ -68,7 +68,7 @@ public class DatasetController {
 		DatasetVO datasetVOFromList=(DatasetVO) editDatasetList.get(0);
 		datasetVOFromList.setStatus(false);
 		this.datasetService.insertDataset(datasetVOFromList);
-		return new ModelAndView("redirect:/viewDataset");
+		return new ModelAndView("redirect:/admin/viewDataset");
 	}	
 	
 }

@@ -12,8 +12,9 @@ import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.servlet.ModelAndView;
 
 import com.tp.model.DatasetVO;
+import com.tp.model.DatasetVO;
 import com.tp.service.DatasetService;
-import com.tp.service.DomainService;
+import com.tp.service.DatasetService;
 
 
 @Controller
@@ -23,14 +24,13 @@ public class DatasetController {
 	DatasetService datasetService;
 	
 	@Autowired
-	DomainService domainService;
-	
+	DatasetService DatasetService;
 	
 	@RequestMapping(value="loadDataset", method=RequestMethod.GET)
 	public ModelAndView loadDataset(Model model)
 	{
-		List domainList=this.domainService.searchDomain();
-		model.addAttribute("domainList",domainList);
+		List DatasetList=this.DatasetService.searchDataset();
+		model.addAttribute("DatasetList",DatasetList);
 		model.addAttribute("datasetVO",new DatasetVO());
 		return new ModelAndView("admin/addDataset");
 	}
@@ -50,13 +50,11 @@ public class DatasetController {
 	}
 	
 	@RequestMapping(value="editDataset", method=RequestMethod.GET)
-	public ModelAndView findByIdDataset(@ModelAttribute DatasetVO datasetVO, @RequestParam int id, Model model)
+	public ModelAndView findByIdDataset(@ModelAttribute DatasetVO DatasetVO, @RequestParam int id, Model model)
 	{
-		datasetVO.setId(id);
-		List datasetList=this.datasetService.findByIdDataset(datasetVO);
-		List domainList=this.domainService.searchDomain();
-		model.addAttribute("domainList",domainList);
-		model.addAttribute("datasetVO",(DatasetVO) datasetList.get(0));
+		DatasetVO.setId(id);
+		List ls=this.DatasetService.findByIdDataset(DatasetVO);
+		model.addAttribute("DatasetVO",(DatasetVO) ls.get(0));
 		return new ModelAndView("admin/addDataset");
 	}
 	
@@ -64,8 +62,8 @@ public class DatasetController {
 	public ModelAndView deleteDataset(@ModelAttribute DatasetVO datasetVO, @RequestParam int id)
 	{
 		datasetVO.setId(id);
-		List editDatasetList=this.datasetService.findByIdDataset(datasetVO);
-		DatasetVO datasetVOFromList=(DatasetVO) editDatasetList.get(0);
+		List editDatasetList=this.DatasetService.findByIdDataset(datasetVO);
+		DatasetVO DatasetVOFromList=(DatasetVO) editDatasetList.get(0);
 		datasetVOFromList.setStatus(false);
 		this.datasetService.insertDataset(datasetVOFromList);
 		return new ModelAndView("redirect:/viewDataset");

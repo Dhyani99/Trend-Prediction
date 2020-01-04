@@ -54,11 +54,15 @@ public class DomainController {
 	public ModelAndView deleteDomain(@ModelAttribute DomainVO domainVO, @RequestParam int id)
 	{
 		domainVO.setId(id);
-		List editDomainList=this.domainService.findByIdDomain(domainVO);
-		DomainVO domainVOFromList=(DomainVO) editDomainList.get(0);
+		List editList=this.domainService.findByIdDomain(domainVO);
+		DomainVO domainVOFromList=(DomainVO) editList.get(0);
 		domainVOFromList.setStatus(false);
 		this.domainService.insertDomain(domainVOFromList);
 		return new ModelAndView("redirect:/viewDomain");
-	}	
+	}
+	
+	
+	
+	
 	
 }

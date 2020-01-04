@@ -53,10 +53,10 @@ public class DatasetController {
 	public ModelAndView findByIdDataset(@ModelAttribute DatasetVO datasetVO, @RequestParam int id, Model model)
 	{
 		datasetVO.setId(id);
-		List datasetList=this.datasetService.findByIdDataset(datasetVO);
-		List domainList=this.domainService.searchDomain();
-		model.addAttribute("domainList",domainList);
-		model.addAttribute("datasetVO",(DatasetVO) datasetList.get(0));
+		List ls=this.datasetService.findByIdDataset(datasetVO);
+		List datasetList=this.datasetService.searchDataset();
+		model.addAttribute("datasetList",datasetList);
+		model.addAttribute("datasetVO",(DatasetVO) ls.get(0));
 		return new ModelAndView("admin/addDataset");
 	}
 	

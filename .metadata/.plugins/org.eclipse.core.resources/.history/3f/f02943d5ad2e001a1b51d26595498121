@@ -13,7 +13,6 @@ import org.springframework.web.servlet.ModelAndView;
 
 import com.tp.model.DatasetVO;
 import com.tp.service.DatasetService;
-import com.tp.service.DomainService;
 
 
 @Controller
@@ -22,15 +21,13 @@ public class DatasetController {
 	@Autowired
 	DatasetService datasetService;
 	
-	@Autowired
-	DomainService domainService;
 	
 	
 	@RequestMapping(value="loadDataset", method=RequestMethod.GET)
 	public ModelAndView loadDataset(Model model)
 	{
-		List domainList=this.domainService.searchDomain();
-		model.addAttribute("domainList",domainList);
+		List datasetList=this.datasetService.searchDataset();
+		model.addAttribute("datasetList",datasetList);
 		model.addAttribute("datasetVO",new DatasetVO());
 		return new ModelAndView("admin/addDataset");
 	}
@@ -53,10 +50,10 @@ public class DatasetController {
 	public ModelAndView findByIdDataset(@ModelAttribute DatasetVO datasetVO, @RequestParam int id, Model model)
 	{
 		datasetVO.setId(id);
-		List datasetList=this.datasetService.findByIdDataset(datasetVO);
-		List domainList=this.domainService.searchDomain();
-		model.addAttribute("domainList",domainList);
-		model.addAttribute("datasetVO",(DatasetVO) datasetList.get(0));
+		List ls=this.datasetService.findByIdDataset(datasetVO);
+		List datasetList=this.datasetService.searchDataset();
+		model.addAttribute("datasetList",datasetList);
+		model.addAttribute("datasetVO",(DatasetVO) ls.get(0));
 		return new ModelAndView("admin/addDataset");
 	}
 	
@@ -64,7 +61,7 @@ public class DatasetController {
 	public ModelAndView deleteDataset(@ModelAttribute DatasetVO datasetVO, @RequestParam int id)
 	{
 		datasetVO.setId(id);
-		List editDatasetList=this.datasetService.findByIdDataset(datasetVO);
+		List editDatasetList=this.DatasetService.findByIdDataset(datasetVO);
 		DatasetVO datasetVOFromList=(DatasetVO) editDatasetList.get(0);
 		datasetVOFromList.setStatus(false);
 		this.datasetService.insertDataset(datasetVOFromList);

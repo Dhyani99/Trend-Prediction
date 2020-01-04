@@ -25,7 +25,7 @@ public class DatasetDAOImpl implements DatasetDAO {
 	public List searchDataset()
 	{
 		Session session = sessionFactory.openSession();
-		Query q=session.createQuery("from DatasetVO where status=true and domainVO.status=true");
+		Query q=session.createQuery("from DatasetVO where status=true");
 		List ls=q.list();
 		return ls;
 	}
@@ -33,8 +33,11 @@ public class DatasetDAOImpl implements DatasetDAO {
 	public List findByIdDataset(DatasetVO datasetVO)
 	{
 			Session session = sessionFactory.openSession();
+			
 			Query q=session.createQuery("from DatasetVO where id="+datasetVO.getId());
+			
 			List ls=q.list();
+	
 			return ls;
 	}
 
