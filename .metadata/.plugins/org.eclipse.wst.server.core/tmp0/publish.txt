@@ -1,4 +1,4 @@
 #Tomcat publish data
-#Fri Jan 03 09:45:42 IST 2020
+#Mon Jan 06 10:41:14 IST 2020
 org.eclipse.jst.jee.server\:/binary\:C\:\\Users\\Microsoft\\.m2\\repository\\org\\springframework\\spring-web\\4.3.8.RELEASE\\spring-web-4.3.8.RELEASE.jar=WEB-INF/lib/spring-web-4.3.8.RELEASE.jar
 org.eclipse.jst.jee.server\:/binary\:C\:\\Users\\Microsoft\\.m2\\repository\\org\\apache\\tomcat\\embed\\tomcat-embed-websocket\\8.5.14\\tomcat-embed-websocket-8.5.14.jar=WEB-INF/lib/tomcat-embed-websocket-8.5.14.jar

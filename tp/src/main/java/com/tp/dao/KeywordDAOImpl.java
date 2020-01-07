@@ -26,7 +26,7 @@ public class KeywordDAOImpl implements KeywordDAO {
 	public List searchKeyword()
 	{
 		Session session = sessionFactory.openSession();
-		Query q=session.createQuery("from KeywordVO where status=true");
+		Query q=session.createQuery("from KeywordVO where status=true and domainVO.status=true");
 		List ls=q.list();
 		return ls;
 	}

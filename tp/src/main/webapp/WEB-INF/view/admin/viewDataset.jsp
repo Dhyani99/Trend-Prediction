@@ -14,27 +14,27 @@
 <%@taglib prefix="c" uri="http://java.sun.com/jstl/core_rt" %>
 
 <!-- Main Styles -->
-<link rel="stylesheet" href="adminResource/css/style.min.css">
-<link rel="stylesheet" href="adminResource/css/custom.css">
+<link rel="stylesheet" href="<%=request.getContextPath() %>/adminResource/css/style.min.css">
+<link rel="stylesheet" href="<%=request.getContextPath() %>/adminResource/css/custom.css">
 
 <!-- Themify Icon -->
-<link rel="stylesheet" href="adminResource/css/themify-icons.css">
+<link rel="stylesheet" href="<%=request.getContextPath() %>/adminResource/css/themify-icons.css">
 
 <!-- mCustomScrollbar -->
 <link rel="stylesheet"
-	href="adminResource/css/jquery.mCustomScrollbar.min.css">
+	href="<%=request.getContextPath() %>/adminResource/css/jquery.mCustomScrollbar.min.css">
 
 <!-- Waves Effect -->
-<link rel="stylesheet" href="adminResource/css/waves.min.css">
+<link rel="stylesheet" href="<%=request.getContextPath() %>/adminResource/css/waves.min.css">
 
 <!-- Sweet Alert -->
-<link rel="stylesheet" href="adminResource/css/sweetalert.css">
+<link rel="stylesheet" href="<%=request.getContextPath() %>/adminResource/css/sweetalert.css">
 
 <!-- Data Tables -->
 <link rel="stylesheet"
-	href="adminResource/css/dataTables.bootstrap4.min.css">
+	href="<%=request.getContextPath() %>/adminResource/css/dataTables.bootstrap4.min.css">
 <link rel="stylesheet"
-	href="adminResource/css/responsive.bootstrap.min.css">
+	href="<%=request.getContextPath() %>/adminResource/css/responsive.bootstrap.min.css">
 
 </head>
 
@@ -53,13 +53,13 @@
 		<div class="content">
 			<ul class="notice-list">
 				<li><a href="#"> <span class="avatar"><img
-							src="adminResource/image/avatar-sm-1.jpg" alt=""></span> <span
+							src="<%=request.getContextPath() %>/adminResource/image/avatar-sm-1.jpg" alt=""></span> <span
 						class="name">John Doe</span> <span class="desc">Like your
 							post: “Contact Form 7 Multi-Step”</span> <span class="time">10
 							min</span>
 				</a></li>
 				<li><a href="#"> <span class="avatar"><img
-							src="adminResource/image/avatar-sm-2.jpg" alt=""></span> <span
+							src="<%=request.getContextPath() %>/adminResource/image/avatar-sm-2.jpg" alt=""></span> <span
 						class="name">Anna William</span> <span class="desc">Like
 							your post: “Facebook Messenger”</span> <span class="time">15 min</span>
 				</a></li>
@@ -70,19 +70,19 @@
 							min</span>
 				</a></li>
 				<li><a href="#"> <span class="avatar"><img
-							src="adminResource/image/avatar-1.jpg" alt=""></span> <span
+							src="<%=request.getContextPath() %>/adminResource/image/avatar-1.jpg" alt=""></span> <span
 						class="name">Jennifer</span> <span class="desc">Like your
 							post: “Contact Form 7 Multi-Step”</span> <span class="time">45
 							min</span>
 				</a></li>
 				<li><a href="#"> <span class="avatar"><img
-							src="adminResource/image/avatar-sm-6.jpg" alt=""></span> <span
+							src="<%=request.getContextPath() %>/adminResource/image/avatar-sm-6.jpg" alt=""></span> <span
 						class="name">Michael Zenaty</span> <span class="desc">Like
 							your post: “Contact Form 7 Multi-Step”</span> <span class="time">50
 							min</span>
 				</a></li>
 				<li><a href="#"> <span class="avatar"><img
-							src="adminResource/image/avatar-sm-4.jpg" alt=""></span> <span
+							src="<%=request.getContextPath() %>/adminResource/image/avatar-sm-4.jpg" alt=""></span> <span
 						class="name">Simon</span> <span class="desc">Like your
 							post: “Facebook Messenger”</span> <span class="time">1 hour</span>
 				</a></li>
@@ -92,12 +92,12 @@
 							your account has been changed.</span> <span class="time">2 hours</span>
 				</a></li>
 				<li><a href="#"> <span class="avatar"><img
-							src="adminResource/image/avatar-sm-7.jpg" alt=""></span> <span
+							src="<%=request.getContextPath() %>/adminResource/image/avatar-sm-7.jpg" alt=""></span> <span
 						class="name">Helen 987</span> <span class="desc">Like your
 							post: “Facebook Messenger”</span> <span class="time">Yesterday</span>
 				</a></li>
 				<li><a href="#"> <span class="avatar"><img
-							src="adminResource/imagep090--
+							src="<%=request.getContextPath() %>/adminResource/imagep090--
 						0
 						:;p;pg" alt=""></span>
 						<span class="name">Denise Jenny</span> <span class="desc">Like
@@ -105,7 +105,7 @@
 							28</span>
 				</a></li>
 				<li><a href="#"> <span class="avatar"><img
-							src="adminResource/image/avatar-sm-8.jpg" alt=""></span> <span
+							src="<%=request.getContextPath() %>/adminResource/image/avatar-sm-8.jpg" alt=""></span> <span
 						class="name">Thomas William</span> <span class="desc">Like
 							your post: “Facebook Messenger”</span> <span class="time">Oct, 27</span>
 				</a></li>
@@ -127,37 +127,37 @@
 		<div class="content">
 			<ul class="notice-list">
 				<li><a href="#"> <span class="avatar"><img
-							src="adminResource/image9avatar-sm-1.jpg" alt=""></span> <span
+							src="<%=request.getContextPath() %>/adminResource/image9avatar-sm-1.jpg" alt=""></span> <span
 						class="name">John Doe</span> <span class="desc">Amet odio
 							neque nobis consequuntur consequatur a quae, impedit facere
 							repellat voluptates.</span> <span class="time">10 min</span>
 				</a></li>
 				<li><a href="#"> <span class="avatar"><img
-							src="adminResource/image/avatar-sm-3.jpg" alt=""></span> <span
+							src="<%=request.getContextPath() %>/adminResource/image/avatar-sm-3.jpg" alt=""></span> <span
 						class="name">Harry Halen</span> <span class="desc">Amet
 							odio neque nobis consequuntur consequatur a quae, impedit facere
 							repellat voluptates.</span> <span class="time">15 min</span>
 				</a></li>
 				<li><a href="#"> <span class="avatar"><img
-							src="adminResource/image/avatar-sm-4.jpg" alt=""></span> <span
+							src="<%=request.getContextPath() %>/adminResource/image/avatar-sm-4.jpg" alt=""></span> <span
 						class="name">Thomas Taylor</span> <span class="desc">Amet
 							odio neque nobis consequuntur consequatur a quae, impedit facere
 							repellat voluptates.</span> <span class="time">30 min</span>
 				</a></li>
 				<li><a href="#"> <span class="avatar"><img
-							src="adminResource/image/avatar-1.jpg" alt=""></span> <span
+							src="<%=request.getContextPath() %>/adminResource/image/avatar-1.jpg" alt=""></span> <span
 						class="name">Jennifer</span> <span class="desc">Amet odio
 							neque nobis consequuntur consequatur a quae, impedit facere
 							repellat voluptates.</span> <span class="time">45 min</span>
 				</a></li>
 				<li><a href="#"> <span class="avatar"><img
-							src="adminResource/image/avatar-sm-5.jpg" alt=""></span> <span
+							src="<%=request.getContextPath() %>/adminResource/image/avatar-sm-5.jpg" alt=""></span> <span
 						class="name">Helen Candy</span> <span class="desc">Amet
 							odio neque nobis consequuntur consequatur a quae, impedit facere
 							repellat voluptates.</span> <span class="time">45 min</span>
 				</a></li>
 				<li><a href="#"> <span class="avatar"><img
-							src="adminResource/image/avatar-2.jpg" alt=""></span> <span
+							src="<%=request.getContextPath() %>/adminResource/image/avatar-2.jpg" alt=""></span> <span
 						class="name">Anna Cavan</span> <span class="desc">Amet odio
 							neque nobis consequuntur consequatur a quae, impedit facere
 							repellat voluptates.</span> <span class="time">1 hour ago</span>
@@ -169,7 +169,7 @@
 							day ago</span>
 				</a></li>
 				<li><a href="#"> <span class="avatar"><img
-							src="adminResource/image/avatar-5.jpg" alt=""></span> <span
+							src="<%=request.getContextPath() %>/adminResource/image/avatar-5.jpg" alt=""></span> <span
 						class="name">Denise Peterson</span> <span class="desc">Amet
 							odio neque nobis consequuntur consequatur a quae, impedit facere
 							repellat voluptates.</span> <span class="time">1 year ago</span>
@@ -239,31 +239,31 @@
 		<!--/#wrapper -->
 	<!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
 	<!--[if lt IE 9]>
-		<script src="adminResource/js/html5shiv.min.js"></script>
-		<script src="adminResource/js/respond.min.js"></script>
+		<script src="<%=request.getContextPath() %>/adminResource/js/html5shiv.min.js"></script>
+		<script src="<%=request.getContextPath() %>/adminResource/js/respond.min.js"></script>
 	<![endif]-->
 	<!-- 
 		================================================== -->
 	<!-- Placed at the end of the document so the pages load faster -->
-	<script src="adminResource/js/jquery.min.js"></script>
-	<script src="adminResource/js/modernizr.min.js"></script>
-	<script src="adminResource/js/bootstrap.min.js"></script>
-	<script src="adminResource/js/jquery.mCustomScrollbar.concat.min.js"></script>
-	<script src="adminResource/js/nprogress.js"></script>
-	<script src="adminResource/js/sweetalert.min.js"></script>
-	<script src="adminResource/js/waves.min.js"></script>
+	<script src="<%=request.getContextPath() %>/adminResource/js/jquery.min.js"></script>
+	<script src="<%=request.getContextPath() %>/adminResource/js/modernizr.min.js"></script>
+	<script src="<%=request.getContextPath() %>/adminResource/js/bootstrap.min.js"></script>
+	<script src="<%=request.getContextPath() %>/adminResource/js/jquery.mCustomScrollbar.concat.min.js"></script>
+	<script src="<%=request.getContextPath() %>/adminResource/js/nprogress.js"></script>
+	<script src="<%=request.getContextPath() %>/adminResource/js/sweetalert.min.js"></script>
+	<script src="<%=request.getContextPath() %>/adminResource/js/waves.min.js"></script>
 	<!-- Sparkline Chart -->
-	<script src="adminResource/js/jquery.sparkline.min.js"></script>
-	<script src="adminResource/js/chart.sparkline.init.min.js"></script>
+	<script src="<%=request.getContextPath() %>/adminResource/js/jquery.sparkline.min.js"></script>
+	<script src="<%=request.getContextPath() %>/adminResource/js/chart.sparkline.init.min.js"></script>
 
 	<!-- Data Tables -->
-	<script src="adminResource/js/jquery.dataTables.min.js"></script>
-	<script src="adminResource/js/dataTables.bootstrap4.min.js"></script>
-	<script src="adminResource/js/dataTables.responsive.min.js"></script>
-	<script src="adminResource/js/responsive.bootstrap.min.js"></script>
-	<script src="adminResource/js/datatables.demo.min.js"></script>
+	<script src="<%=request.getContextPath() %>/adminResource/js/jquery.dataTables.min.js"></script>
+	<script src="<%=request.getContextPath() %>/adminResource/js/dataTables.bootstrap4.min.js"></script>
+	<script src="<%=request.getContextPath() %>/adminResource/js/dataTables.responsive.min.js"></script>
+	<script src="<%=request.getContextPath() %>/adminResource/js/responsive.bootstrap.min.js"></script>
+	<script src="<%=request.getContextPath() %>/adminResource/js/datatables.demo.min.js"></script>
 
-	<script src="adminResource/js/main.min.js"></script>
-	<script src="adminResource/js/mycommon.js"></script>
+	<script src="<%=request.getContextPath() %>/adminResource/js/main.min.js"></script>
+	<script src="<%=request.getContextPath() %>/adminResource/js/mycommon.js"></script>
 </body>
 </html>

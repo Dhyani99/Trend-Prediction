@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Copy 2 elements to &apos;tp/src/main/java/com.tp.model&apos;&#x0D;&#x0A;- Original project: &apos;SpringBootFK&apos;&#x0D;&#x0A;- Destination element: &apos;tp/src/main/java/com.tp.model&apos;&#x0D;&#x0A;- Original elements:&#x0D;&#x0A;     com.demo.model.RegVO.java&#x0D;&#x0A;     com.demo.model.LoginVO.java" description="Copy compilation units" destination="=tp/src\/main\/java&lt;com.tp.model" element1="/src\/main\/java&lt;com.demo.model{RegVO.java" element2="/src\/main\/java&lt;com.demo.model{LoginVO.java" files="0" flags="589830" folders="0" id="org.eclipse.jdt.ui.copy" policy="org.eclipse.jdt.ui.copyResources" stamp="1578286867406" units="2" version="1.0"/>
+</session>

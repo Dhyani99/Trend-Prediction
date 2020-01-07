@@ -12,30 +12,30 @@
 	<title>Home - SpaceX Template</title>
 
 	<!-- Main Styles -->
-	<link rel="stylesheet" href="adminResource/css/style.min.css">
-<link rel="stylesheet" href="adminResource/css/custom.css">
+	<link rel="stylesheet" href="<%=request.getContextPath() %>/adminResource/css/style.min.css">
+<link rel="stylesheet" href="<%=request.getContextPath() %>/adminResource/css/custom.css">
 	
 	<!-- Themify Icon -->
-	<link rel="stylesheet" href="adminResource/css/themify-icons.css">
+	<link rel="stylesheet" href="<%=request.getContextPath() %>/adminResource/css/themify-icons.css">
 
 	<!-- mCustomScrollbar -->
-	<link rel="stylesheet" href="adminResource/css/jquery.mCustomScrollbar.min.css">
+	<link rel="stylesheet" href="<%=request.getContextPath() %>/adminResource/css/jquery.mCustomScrollbar.min.css">
 
 	<!-- Waves Effect -->
-	<link rel="stylesheet" href="adminResource/css/waves.min.css">
+	<link rel="stylesheet" href="<%=request.getContextPath() %>/adminResource/css/waves.min.css">
 
 	<!-- Sweet Alert -->
-	<link rel="stylesheet" href="adminResource/css/sweetalert.css">
+	<link rel="stylesheet" href="<%=request.getContextPath() %>/adminResource/css/sweetalert.css">
 	
 	<!-- Percent Circle -->
-	<link rel="stylesheet" href="adminResource/css/percircle.css">
+	<link rel="stylesheet" href="<%=request.getContextPath() %>/adminResource/css/percircle.css">
 
 	<!-- Chartist Chart -->
-	<link rel="stylesheet" href="adminResource/css/chartist.min.css">
+	<link rel="stylesheet" href="<%=request.getContextPath() %>/adminResource/css/chartist.min.css">
 
 	<!-- FullCalendar -->
-	<link rel="stylesheet" href="adminResource/css/fullcalendar.min.css">
-	<link rel="stylesheet" href="adminResource/css/fullcalendar.print.css" media='print'>
+	<link rel="stylesheet" href="<%=request.getContextPath() %>/adminResource/css/fullcalendar.min.css">
+	<link rel="stylesheet" href="<%=request.getContextPath() %>/adminResource/css/fullcalendar.print.css" media='print'>
 
 </head>
 
@@ -55,7 +55,7 @@
 		<ul class="notice-list">
 			<li>
 				<a href="#">
-					<span class="avatar"><img src="adminResource/image/avatar-sm-1.jpg" alt=""></span>
+					<span class="avatar"><img src="<%=request.getContextPath() %>/adminResource/image/avatar-sm-1.jpg" alt=""></span>
 					<span class="name">John Doe</span>
 					<span class="desc">Like your post: “Contact Form 7 Multi-Step”</span>
 					<span class="time">10 min</span>
@@ -63,7 +63,7 @@
 			</li>
 			<li>
 				<a href="#">
-					<span class="avatar"><img src="adminResource/image/avatar-sm-2.jpg" alt=""></span>
+					<span class="avatar"><img src="<%=request.getContextPath() %>/adminResource/image/avatar-sm-2.jpg" alt=""></span>
 					<span class="name">Anna William</span>
 					<span class="desc">Like your post: “Facebook Messenger”</span>
 					<span class="time">15 min</span>
@@ -79,7 +79,7 @@
 			</li>
 			<li>
 				<a href="#">
-					<span class="avatar"><img src="adminResource/image/avatar-1.jpg" alt=""></span>
+					<span class="avatar"><img src="<%=request.getContextPath() %>/adminResource/image/avatar-1.jpg" alt=""></span>
 					<span class="name">Jennifer</span>
 					<span class="desc">Like your post: “Contact Form 7 Multi-Step”</span>
 					<span class="time">45 min</span>
@@ -95,7 +95,7 @@
 			</li>
 			<li>
 				<a href="#">
-					<span class="avatar"><img src="adminResource/image/avatar-sm-4.jpg" alt=""></span>
+					<span class="avatar"><img src="<%=request.getContextPath() %>/adminResource/image/avatar-sm-4.jpg" alt=""></span>
 					<span class="name">Simon</span>
 					<span class="desc">Like your post: “Facebook Messenger”</span>
 					<span class="time">1 hour</span>
@@ -111,7 +111,7 @@
 			</li>
 			<li>
 				<a href="#">
-					<span class="avatar"><img src="adminResource/image/avatar-sm-7.jpg" alt=""></span>
+					<span class="avatar"><img src="<%=request.getContextPath() %>/adminResource/image/avatar-sm-7.jpg" alt=""></span>
 					<span class="name">Helen 987</span>
 					<span class="desc">Like your post: “Facebook Messenger”</span>
 					<span class="time">Yesterday</span>
@@ -119,7 +119,7 @@
 			</li>
 			<li>
 				<a href="#">
-					<span class="avatar"><img src="adminResource/image/avatar-2.jpg" alt=""></span>
+					<span class="avatar"><img src="<%=request.getContextPath() %>/adminResource/image/avatar-2.jpg" alt=""></span>
 					<span class="name">Denise Jenny</span>
 					<span class="desc">Like your post: “Contact Form 7 Multi-Step”</span>
 					<span class="time">Oct, 28</span>
@@ -127,7 +127,7 @@
 			</li>
 			<li>
 				<a href="#">
-					<span class="avatar"><img src="adminResource/image/avatar-sm-8.jpg" alt=""></span>
+					<span class="avatar"><img src="<%=request.getContextPath() %>/adminResource/image/avatar-sm-8.jpg" alt=""></span>
 					<span class="name">Thomas William</span>
 					<span class="desc">Like your post: “Facebook Messenger”</span>
 					<span class="time">Oct, 27</span>
@@ -148,7 +148,7 @@
 		<ul class="notice-list">
 			<li>
 				<a href="#">
-					<span class="avatar"><img src="adminResource/image/avatar-sm-1.jpg" alt=""></span>
+					<span class="avatar"><img src="<%=request.getContextPath() %>/adminResource/image/avatar-sm-1.jpg" alt=""></span>
 					<span class="name">John Doe</span>
 					<span class="desc">Amet odio neque nobis consequuntur consequatur a quae, impedit facere repellat voluptates.</span>
 					<span class="time">10 min</span>
@@ -156,7 +156,7 @@
 			</li>
 			<li>
 				<a href="#">
-					<span class="avatar"><img src="adminResource/image/avatar-sm-3.jpg" alt=""></span>
+					<span class="avatar"><img src="<%=request.getContextPath() %>/adminResource/image/avatar-sm-3.jpg" alt=""></span>
 					<span class="name">Harry Halen</span>
 					<span class="desc">Amet odio neque nobis consequuntur consequatur a quae, impedit facere repellat voluptates.</span>
 					<span class="time">15 min</span>
@@ -164,7 +164,7 @@
 			</li>
 			<li>
 				<a href="#">
-					<span class="avatar"><img src="adminResource/image/avatar-sm-4.jpg" alt=""></span>
+					<span class="avatar"><img src="<%=request.getContextPath() %>/adminResource/image/avatar-sm-4.jpg" alt=""></span>
 					<span class="name">Thomas Taylor</span>
 					<span class="desc">Amet odio neque nobis consequuntur consequatur a quae, impedit facere repellat voluptates.</span>
 					<span class="time">30 min</span>
@@ -172,7 +172,7 @@
 			</li>
 			<li>
 				<a href="#">
-					<span class="avatar"><img src="adminResource/image/avatar-1.jpg" alt=""></span>
+					<span class="avatar"><img src="<%=request.getContextPath() %>/adminResource/image/avatar-1.jpg" alt=""></span>
 					<span class="name">Jennifer</span>
 					<span class="desc">Amet odio neque nobis consequuntur consequatur a quae, impedit facere repellat voluptates.</span>
 					<span class="time">45 min</span>
@@ -180,7 +180,7 @@
 			</li>
 			<li>
 				<a href="#">
-					<span class="avatar"><img src="adminResource/image/avatar-sm-5.jpg" alt=""></span>
+					<span class="avatar"><img src="<%=request.getContextPath() %>/adminResource/image/avatar-sm-5.jpg" alt=""></span>
 					<span class="name">Helen Candy</span>
 					<span class="desc">Amet odio neque nobis consequuntur consequatur a quae, impedit facere repellat voluptates.</span>
 					<span class="time">45 min</span>
@@ -188,7 +188,7 @@
 			</li>
 			<li>
 				<a href="#">
-					<span class="avatar"><img src="adminResource/image/avatar-2.jpg" alt=""></span>
+					<span class="avatar"><img src="<%=request.getContextPath() %>/adminResource/image/avatar-2.jpg" alt=""></span>
 					<span class="name">Anna Cavan</span>
 					<span class="desc">Amet odio neque nobis consequuntur consequatur a quae, impedit facere repellat voluptates.</span>
 					<span class="time">1 hour ago</span>
@@ -204,7 +204,7 @@
 			</li>
 			<li>
 				<a href="#">
-					<span class="avatar"><img src="adminResource/image/avatar-5.jpg" alt=""></span>
+					<span class="avatar"><img src="<%=request.getContextPath() %>/adminResource/image/avatar-5.jpg" alt=""></span>
 					<span class="name">Denise Peterson</span>
 					<span class="desc">Amet odio neque nobis consequuntur consequatur a quae, impedit facere repellat voluptates.</span>
 					<span class="time">1 year ago</span>
@@ -616,39 +616,39 @@
 </div><!--/#wrapper -->
 	<!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
 	<!--[if lt IE 9]>
-		<script src="adminResource/js/html5shiv.min.js"></script>
-		<script src="adminResource/js/respond.min.js"></script>
+		<script src="<%=request.getContextPath() %>/adminResource/js/html5shiv.min.js"></script>
+		<script src="<%=request.getContextPath() %>/adminResource/js/respond.min.js"></script>
 	<![endif]-->
 	<!-- 
 	================================================== -->
 	<!-- Placed at the end of the document so the pages load faster -->
-	<script src="adminResource/js/jquery.min.js"></script>
-	<script src="adminResource/js/modernizr.min.js"></script>
-	<script src="adminResource/js/bootstrap.min.js"></script>
-	<script src="adminResource/js/jquery.mCustomScrollbar.concat.min.js"></script>
-	<script src="adminResource/js/nprogress.js"></script>
-	<script src="adminResource/js/sweetalert.min.js"></script>
-	<script src="adminResource/js/waves.min.js"></script>
+	<script src="<%=request.getContextPath() %>/adminResource/js/jquery.min.js"></script>
+	<script src="<%=request.getContextPath() %>/adminResource/js/modernizr.min.js"></script>
+	<script src="<%=request.getContextPath() %>/adminResource/js/bootstrap.min.js"></script>
+	<script src="<%=request.getContextPath() %>/adminResource/js/jquery.mCustomScrollbar.concat.min.js"></script>
+	<script src="<%=request.getContextPath() %>/adminResource/js/nprogress.js"></script>
+	<script src="<%=request.getContextPath() %>/adminResource/js/sweetalert.min.js"></script>
+	<script src="<%=request.getContextPath() %>/adminResource/js/waves.min.js"></script>
 	<!-- Sparkline Chart -->
-	<script src="adminResource/js/jquery.sparkline.min.js"></script>
-	<script src="adminResource/js/chart.sparkline.init.min.js"></script>
+	<script src="<%=request.getContextPath() %>/adminResource/js/jquery.sparkline.min.js"></script>
+	<script src="<%=request.getContextPath() %>/adminResource/js/chart.sparkline.init.min.js"></script>
 
 	<!-- Percent Circle -->
-	<script src="adminResource/js/percircle.js"></script>
+	<script src="<%=request.getContextPath() %>/adminResource/js/percircle.js"></script>
 
 	<!-- Google Chart -->
-	<script type="text/javascript" src="adminResource/js/loader.js"></script>
+	<script type="text/javascript" src="<%=request.getContextPath() %>/adminResource/js/loader.js"></script>
 
 	<!-- Chartist Chart -->
-	<script src="adminResource/js/chartist.min.js"></script>
-	<script src="adminResource/js/jquery.chartist.init.min.js"></script>
+	<script src="<%=request.getContextPath() %>/adminResource/js/chartist.min.js"></script>
+	<script src="<%=request.getContextPath() %>/adminResource/js/jquery.chartist.init.min.js"></script>
 
 	<!-- FullCalendar -->
-	<script src="adminResource/js/moment.js"></script>
-	<script src="adminResource/js/fullcalendar.min.js"></script>
-	<script src="adminResource/js/fullcalendar.init.js"></script>
+	<script src="<%=request.getContextPath() %>/adminResource/js/moment.js"></script>
+	<script src="<%=request.getContextPath() %>/adminResource/js/fullcalendar.min.js"></script>
+	<script src="<%=request.getContextPath() %>/adminResource/js/fullcalendar.init.js"></script>
 
-	<script src="adminResource/js/main.min.js"></script>
-<script src="adminResource/js/mycommon.js"></script>
+	<script src="<%=request.getContextPath() %>/adminResource/js/main.min.js"></script>
+<script src="<%=request.getContextPath() %>/adminResource/js/mycommon.js"></script>
 </body>
 </html>
