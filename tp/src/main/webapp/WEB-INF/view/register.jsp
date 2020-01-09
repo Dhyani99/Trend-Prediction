@@ -212,58 +212,60 @@
 		<div class="row small-spacing">
 			<div class="col-12">
 				<div class="box-content">
-					<form data-toggle="validator">
+				<%@taglib prefix="f" uri="http://www.springframework.org/tags/form"%>
+					<f:form data-toggle="validator" action="insert" modelAttribute="registerVO" method="post">
 					<h1 class="page-title">REGISTRATION</h1>
 						<div class="form-group">
 							<label for="inputName" class="control-label"> First Name</label>
-							<input type="text" class="form-control" id="inputName" placeholder="Enter first name" required>
+							<f:input path="firstName" class="form-control" id="inputName" placeholder="Enter first name" required="true"/>
 						</div>
 						
 						<div class="form-group">
 							<label for="inputName" class="control-label"> Last Name</label>
-							<input type="text" class="form-control" id="inputName" placeholder="Enter last name" required>
+							<f:input path="lastName" class="form-control" id="inputName" placeholder="Enter last name" required="true"/>
 						</div>
 						
 						<div class="form-group">
 						<label for="gender" class="control-label"> Gender</label>
 							<div class="radio">
-								<input type="radio" name="Male" id="underwear1" required="">
+								<f:radiobutton path="gender" value="male" name="Male" id="underwear1" required="true"/>
 								<label for="underwear1">Male</label>
 							</div>
 							<div class="radio">
-								<input type="radio" name="Female" id="underwear2" required="">
+								<f:radiobutton path="gender" value="female" name="Female" id="underwear2" required="true"/>
 								<label for="underwear2">Female</label>
 							</div>
 						</div>
 						<div class="form-group">
 							<label for="inputEmail" class="control-label">Email</label>
-							<input type="email" class="form-control" id="inputEmail" placeholder="Enter email" data-error="Bruh, that email address is invalid" required>
+							<f:input path="loginVO.username" class="form-control" id="inputEmail" placeholder="Enter email" data-error="Bruh, that email address is invalid" required="true"/>
 							<div class="help-block with-errors"></div>
 						</div>
 						
 						<div class="form-group">
 							<label for="inputName" class="control-label"> Contact No</label>
-							<input type="text" class="form-control" id="inputName" placeholder="Enter contact number" required>
+							<f:input path="contactNumber" class="form-control" id="inputName" placeholder="Enter contact number" required="true"/>
 						</div>
 										
 						<div class="form-group">
 							<label for="inputPassword" class="control-label">Password</label>
 							<div class="row">
 								<div class="form-group col-md-6">
-									<input type="password" data-minlength="6" class="form-control" id="inputPassword" placeholder="Enter password" required>
+									<f:password path="loginVO.password" data-minlength="6" class="form-control" id="inputPassword" placeholder="Enter password" required="true"/>
 									<div class="help-block">Minimum of 6 characters</div>
 								</div>
 								<div class="form-group col-md-6">
-									<input type="password" class="form-control" id="inputPasswordConfirm" data-match="#inputPassword" data-match-error="Whoops, these don't match" placeholder="Confirm password" required>
+									<input type="password"  class="form-control" id="inputPasswordConfirm" data-match="#inputPassword" data-match-error="Whoops, these don't match" placeholder="Confirm password" required="true"/>
 									<div class="help-block with-errors"></div>
 								</div>
 							</div>
 						</div>
 						
 						<div class="form-group">
+							
 							<button type="submit" class="btn btn-primary waves-effect waves-light">Submit</button>
 						</div>
-					</form>
+					</f:form>
 				</div>
 				<!-- /.box-content -->
 			</div>
