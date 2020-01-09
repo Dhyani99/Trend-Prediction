@@ -7,10 +7,18 @@
 <fullyQualifiedTypeName name="com.tp.model.DatasetVO"/>
 <fullyQualifiedTypeName name="com.tp.model.DomainVO"/>
 <fullyQualifiedTypeName name="org.springframework.ui.Model"/>
-<fullyQualifiedTypeName name="org.springframework.stereotype.Repository"/>
-<fullyQualifiedTypeName name="org.springframework.stereotype.Controller"/>
 <fullyQualifiedTypeName name="com.tp.service.DomainService"/>
 <fullyQualifiedTypeName name="com.tp.dao.LoginDAO"/>
 <fullyQualifiedTypeName name="com.tp.model.RegisterVO"/>
 <fullyQualifiedTypeName name="com.tp.model.LoginVO"/>
+<fullyQualifiedTypeName name="java.sql.Date"/>
+<fullyQualifiedTypeName name="com.tp.model.FeedbackVO"/>
+<fullyQualifiedTypeName name="com.tp.dao.FeedbackDAO"/>
+<fullyQualifiedTypeName name="org.springframework.stereotype.Controller"/>
+<fullyQualifiedTypeName name="org.springframework.stereotype.Service"/>
+<fullyQualifiedTypeName name="javax.transaction.Transactional"/>
+<fullyQualifiedTypeName name="org.springframework.transaction.annotation.Transactional"/>
+<fullyQualifiedTypeName name="org.springframework.stereotype.Repository"/>
+<fullyQualifiedTypeName name="ch.qos.logback.core.net.SyslogOutputStream"/>
+<fullyQualifiedTypeName name="org.springframework.web.bind.annotation.RequestMapping"/>
 </qualifiedTypeNameHistroy>

@@ -239,6 +239,7 @@
 						<div class="form-group">
 							<label for="inputName" class="control-label">Keyword</label>
 							<f:input path="keywordName" class="form-control" id="inputName" placeholder="Enter Keyword" required="true"/>
+							<f:hidden path="id"/>
 						</div>
 						<!--  <div class="form-group has-feedback">
 							<label for="inputTwitter" class="control-label">Twitter</label>

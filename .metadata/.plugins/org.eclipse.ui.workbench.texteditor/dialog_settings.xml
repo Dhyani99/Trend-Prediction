@@ -2,30 +2,33 @@
 <section name="Workbench">
 	<section name="org.eclipse.ui.texteditor.FindReplaceDialog">
 		<item value="false" key="isRegEx"/>
-		<item value="&lt;%=request.getContextPath() %&gt;/adminResource" key="selection"/>
+		<item value="Complain" key="selection"/>
 		<item value="false" key="casesensitive"/>
 		<item value="false" key="incremental"/>
 		<item value="true" key="wrap"/>
 		<item value="false" key="wholeword"/>
 		<list key="findhistory">
+			<item value="complain"/>
 			<item value="adminResource"/>
+			<item value="hidden"/>
+			<item value="Complain"/>
+			<item value="Domain"/>
+			<item value="Dataset"/>
+			<item value="domain"/>
 			<item value="f:"/>
 			<item value="menu"/>
 			<item value="page"/>
-			<item value="Domain"/>
 			<item value="State"/>
 			<item value="edit"/>
-			<item value="Dataset"/>
-			<item value="domain"/>
 			<item value="Keyword"/>
 			<item value="D"/>
 			<item value="entityManagerFactory"/>
-			<item value="User"/>
-			<item value="page-title"/>
-			<item value="header"/>
 		</list>
 		<list key="replacehistory">
 			<item value="&lt;%=request.getContextPath() %&gt;/adminResource"/>
+			<item value=""/>
+			<item value="Feedback"/>
+			<item value="Complain"/>
 			<item value="Dataset"/>
 			<item value="Domain"/>
 			<item value="findById"/>

@@ -9,7 +9,7 @@ import javax.persistence.Id;
 import javax.persistence.Table;
 
 @Entity
-@Table(name="DomainTable")
+@Table(name="domain_table")
 public class DomainVO
 {
 	@Id

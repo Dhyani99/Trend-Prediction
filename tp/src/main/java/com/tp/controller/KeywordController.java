@@ -17,6 +17,7 @@ import com.tp.service.KeywordService;
 import com.tp.service.DomainService;
 
 @Controller
+@RequestMapping("/admin")
 public class KeywordController {
 
 	@Autowired
@@ -25,7 +26,7 @@ public class KeywordController {
 	@Autowired
 	DomainService domainService;
 	
-	@RequestMapping(value="loadKeyword", method=RequestMethod.GET)
+	@RequestMapping(value="/loadKeyword", method=RequestMethod.GET)
 	public ModelAndView loadKeyword(Model model)
 	{
 		List domainList=this.domainService.searchDomain();
@@ -34,22 +35,22 @@ public class KeywordController {
 		return new ModelAndView("admin/addKeyword");
 	}
 
-	@RequestMapping(value="insertKeyword")
+	@RequestMapping(value="/insertKeyword")
 	public ModelAndView insertKeyword(@ModelAttribute KeywordVO keywordVO)
 	{
 		keywordVO.setStatus(true);
 		this.keywordService.insertKeyword(keywordVO);
-		return new ModelAndView("redirect:/");
+		return new ModelAndView("redirect:/admin/viewKeyword");
 	}
 	
-	@RequestMapping(value="viewKeyword")
+	@RequestMapping(value="/viewKeyword")
 	public ModelAndView viewKeyword()
 	{
 		List keywordList=this.keywordService.searchKeyword();
 		return new ModelAndView("admin/viewKeyword","keywordList",keywordList);
 	}
 	
-	@RequestMapping(value="editKeyword", method=RequestMethod.GET)
+	@RequestMapping(value="/editKeyword", method=RequestMethod.GET)
 	public ModelAndView findByIdKeyword(@ModelAttribute KeywordVO keywordVO, @RequestParam int id, Model model)
 	{
 		keywordVO.setId(id);
@@ -60,7 +61,7 @@ public class KeywordController {
 		return new ModelAndView("admin/addKeyword");
 	}
 	
-	@RequestMapping(value="deleteKeyword", method=RequestMethod.GET)
+	@RequestMapping(value="/deleteKeyword", method=RequestMethod.GET)
 	public ModelAndView deleteDataset(@ModelAttribute KeywordVO keywordVO, @RequestParam int id)
 	{
 		keywordVO.setId(id);
@@ -68,7 +69,7 @@ public class KeywordController {
 		KeywordVO keywordVOFromList=(KeywordVO) editKeywordList.get(0);
 		keywordVOFromList.setStatus(false);
 		this.keywordService.insertKeyword(keywordVOFromList);
-		return new ModelAndView("redirect:/viewKeyword");
+		return new ModelAndView("redirect:/admin/viewKeyword");
 	}	
 
 }

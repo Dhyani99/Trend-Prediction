@@ -1,8 +1,0 @@
-package com.tp.DAO;
-
-import com.tp.model.DomainVO;
-
-public interface DomainDAO {
-
-	public void insertDomain(DomainVO domainVO);
-}

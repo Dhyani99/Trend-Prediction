@@ -16,32 +16,33 @@ import com.tp.model.DomainVO;
 import com.tp.service.DomainService;
 
 @Controller
+@RequestMapping("/admin")
 public class DomainController {
 	
 	@Autowired
 	DomainService domainService;
 	
-	@RequestMapping(value="loadDomain", method=RequestMethod.GET)
+	@RequestMapping(value="/loadDomain", method=RequestMethod.GET)
 	public ModelAndView loadDomain()
 	{
 		return new ModelAndView("admin/addDomain","domainVO", new DomainVO());
 	}
 
-	@RequestMapping(value="insertDomain")
+	@RequestMapping(value="/insertDomain")
 	public ModelAndView insertDomain(@ModelAttribute DomainVO domainVO)
 	{
 		domainVO.setStatus(true);
 		this.domainService.insertDomain(domainVO);
-		return new ModelAndView("redirect:/");
+		return new ModelAndView("redirect:/admin/viewDomain");
 	}
-	@RequestMapping(value="viewDomain")
+	@RequestMapping(value="/viewDomain")
 	public ModelAndView viewDomain()
 	{
 		List domainList=this.domainService.searchDomain();
 		return new ModelAndView("admin/viewDomain","domainList",domainList);
 	}
 	
-	@RequestMapping(value="editDomain", method=RequestMethod.GET)
+	@RequestMapping(value="/editDomain", method=RequestMethod.GET)
 	public ModelAndView findByIdDomain(@ModelAttribute DomainVO domainVO, @RequestParam int id, Model model)
 	{
 		domainVO.setId(id);
@@ -50,7 +51,7 @@ public class DomainController {
 		return new ModelAndView("admin/addDomain");
 	}
 	
-	@RequestMapping(value="deleteDomain", method=RequestMethod.GET)
+	@RequestMapping(value="/deleteDomain", method=RequestMethod.GET)
 	public ModelAndView deleteDomain(@ModelAttribute DomainVO domainVO, @RequestParam int id)
 	{
 		domainVO.setId(id);
@@ -58,7 +59,7 @@ public class DomainController {
 		DomainVO domainVOFromList=(DomainVO) editDomainList.get(0);
 		domainVOFromList.setStatus(false);
 		this.domainService.insertDomain(domainVOFromList);
-		return new ModelAndView("redirect:/viewDomain");
+		return new ModelAndView("redirect:/admin/viewDomain");
 	}	
 	
 }

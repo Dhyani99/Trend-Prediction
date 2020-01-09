@@ -59,7 +59,7 @@
 			</div> -->
 			
 			<!-- /.row -->
-			<a href="page-register.html" class="a-link"><i class="fa fa-key"></i>New User? Register.</a>
+			<a href="register" class="a-link"><i class="fa fa-key"></i>New User? Register.</a>
 			<div class="frm-footer"></div>
 			<!-- /.footer -->
 		</div>

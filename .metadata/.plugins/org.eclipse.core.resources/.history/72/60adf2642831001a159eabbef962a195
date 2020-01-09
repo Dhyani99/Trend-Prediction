@@ -1,0 +1,12 @@
+package com.tp.model;
+
+import javax.persistence.Entity;
+import javax.persistence.Table;
+
+@Entity
+@Table(name="complain_table")
+public class ComplainVO {
+	
+	
+
+}

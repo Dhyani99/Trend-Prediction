@@ -78,7 +78,7 @@
 				<li>
 					<a class="waves-effect parent-item js__control" href="#"><i class="menu-icon ti-headphone-alt"></i><span>Manage Complain</span><span class="menu-arrow fa fa-angle-down"></span></a>
 					<ul class="sub-menu js__content">
-						<li><a href="ui-buttons.html">View Complain</a></li>
+						<li><a href="viewComplain">View Complain</a></li>
 						<!-- <li><a href="ui-cards.html">Cards</a></li>
 						<li><a href="ui-checkbox-radio.html">Checkboxs-Radios</a></li>
 						<li><a href="ui-components.html">Components</a></li>
@@ -95,7 +95,7 @@
 				<li>
 					<a class="waves-effect parent-item js__control" href="#"><i class="menu-icon ti-face-smile"></i><span>Manage feedback</span><span class="menu-arrow fa fa-angle-down"></span></a>
 					<ul class="sub-menu js__content">
-						<li><a href="form-elements.html">View Feedback</a></li>
+						<li><a href="viewFeedback">View Feedback</a></li>
 						<!-- <li><a href="form-advanced.html">Advanced Form</a></li>
 						<li><a href="form-fileupload.html">Form Uploads</a></li>
 						<li><a href="validation.jsp">Form Validation</a></li>

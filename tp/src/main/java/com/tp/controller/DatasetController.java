@@ -15,8 +15,11 @@ import com.tp.model.DatasetVO;
 import com.tp.service.DatasetService;
 import com.tp.service.DomainService;
 
+import ch.qos.logback.core.net.SyslogOutputStream;
+
 
 @Controller
+@RequestMapping("/admin")
 public class DatasetController {
 	
 	@Autowired
@@ -26,30 +29,31 @@ public class DatasetController {
 	DomainService domainService;
 	
 	
-	@RequestMapping(value="loadDataset", method=RequestMethod.GET)
+	@RequestMapping(value="/loadDataset", method=RequestMethod.GET)
 	public ModelAndView loadDataset(Model model)
 	{
+		System.out.println("loadDataset");
 		List domainList=this.domainService.searchDomain();
 		model.addAttribute("domainList",domainList);
 		model.addAttribute("datasetVO",new DatasetVO());
 		return new ModelAndView("admin/addDataset");
 	}
 
-	@RequestMapping(value="insertDataset")
+	@RequestMapping(value="/insertDataset")
 	public ModelAndView insertDataset(@ModelAttribute DatasetVO datasetVO)
 	{
 		datasetVO.setStatus(true);
 		this.datasetService.insertDataset(datasetVO);
-		return new ModelAndView("redirect:/");
+		return new ModelAndView("redirect:/admin/viewDataset");
 	}
-	@RequestMapping(value="viewDataset")
+	@RequestMapping(value="/viewDataset")
 	public ModelAndView viewDataset()
 	{
 		List datasetList=this.datasetService.searchDataset();
 		return new ModelAndView("admin/viewDataset","datasetList",datasetList);
 	}
 	
-	@RequestMapping(value="editDataset", method=RequestMethod.GET)
+	@RequestMapping(value="/editDataset", method=RequestMethod.GET)
 	public ModelAndView findByIdDataset(@ModelAttribute DatasetVO datasetVO, @RequestParam int id, Model model)
 	{
 		datasetVO.setId(id);
@@ -60,7 +64,7 @@ public class DatasetController {
 		return new ModelAndView("admin/addDataset");
 	}
 	
-	@RequestMapping(value="deleteDataset", method=RequestMethod.GET)
+	@RequestMapping(value="/deleteDataset", method=RequestMethod.GET)
 	public ModelAndView deleteDataset(@ModelAttribute DatasetVO datasetVO, @RequestParam int id)
 	{
 		datasetVO.setId(id);
@@ -68,7 +72,7 @@ public class DatasetController {
 		DatasetVO datasetVOFromList=(DatasetVO) editDatasetList.get(0);
 		datasetVOFromList.setStatus(false);
 		this.datasetService.insertDataset(datasetVOFromList);
-		return new ModelAndView("redirect:/viewDataset");
+		return new ModelAndView("redirect:/admin/viewDataset");
 	}	
 	
 }

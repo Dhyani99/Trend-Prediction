@@ -11,7 +11,7 @@ import javax.persistence.Table;
 
 
 @Entity
-@Table(name="DatasetTable")
+@Table(name="dataset_table")
 public class DatasetVO {
 	
 	

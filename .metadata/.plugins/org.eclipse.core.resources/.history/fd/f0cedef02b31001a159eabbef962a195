@@ -1,0 +1,6 @@
+package com.tp.controller;
+
+@Controller
+public class ComplainController {
+
+}

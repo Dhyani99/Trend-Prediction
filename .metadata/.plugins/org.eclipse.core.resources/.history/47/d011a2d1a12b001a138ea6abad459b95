@@ -1,9 +1,0 @@
-package com.tp.DAO;
-
-import com.demo.model.RegVO;
-
-public interface DatasetDAO {
-
-	public void insertDataset(DatasetVO datasetVO);
-	
-}

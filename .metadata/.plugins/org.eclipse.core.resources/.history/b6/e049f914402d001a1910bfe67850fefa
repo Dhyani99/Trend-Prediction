@@ -1,8 +1,0 @@
-package com.tp.service;
-
-import com.tp.model.DatasetVO;
-
-public interface DatasetService {
-
-	public void insertDataset(DatasetVO datasetVO);
-}
