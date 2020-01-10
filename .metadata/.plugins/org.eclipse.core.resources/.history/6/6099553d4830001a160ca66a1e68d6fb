@@ -1,8 +1,0 @@
-package com.tp.service;
-
-public class LoginService{
-
-	public void insertLogin(LoginVO loginVO) ;
-	
-	
-}
