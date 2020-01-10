@@ -214,7 +214,7 @@
 		<div class="row small-spacing">
 			<div class="col-12">
 				<div class="box-content">
-					<f:form data-toggle="validator" action="insertDataset" modelAttribute="datasetVO">
+					<f:form data-toggle="validator" action="insertDataset" enctype="multipart/form-data" modelAttribute="datasetVO">
 						<h1 class="page-title">ADD DATASET</h1>
 						<div class="form-group">
 						<p>Domain</p><f:select path="domainVO.id" class="form-control select2_1 select2-hidden-accessible" tabindex="-1" aria-hidden="true" placeholder="Select Domain">
@@ -286,7 +286,7 @@
 						</div>
 						<div class="form-group">
 						<label for="exampleInputFile">Upload Dataset: </label>
-						<input type="file" id="exampleInputFile"><br>
+						<input type="file" name="file" id="exampleInputFile"><br>
 							<button type="submit" class="btn btn-primary waves-effect waves-light">Submit</button>
 						</div>
 					</f:form>

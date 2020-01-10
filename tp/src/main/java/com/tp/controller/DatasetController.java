@@ -9,11 +9,17 @@ import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RequestParam;
+import org.springframework.web.multipart.MultipartFile;
 import org.springframework.web.servlet.ModelAndView;
 
 import com.tp.model.DatasetVO;
 import com.tp.service.DatasetService;
 import com.tp.service.DomainService;
+import java.io.IOException;
+import java.nio.file.Files;
+import java.nio.file.Path;
+import java.nio.file.Paths;
+
 
 import ch.qos.logback.core.net.SyslogOutputStream;
 
@@ -28,11 +34,10 @@ public class DatasetController {
 	@Autowired
 	DomainService domainService;
 	
-	
+	private static String UPLOAD_FOLDER = "E:\\Projectsem8\\workspace\\files storage\\";
 	@RequestMapping(value="/loadDataset", method=RequestMethod.GET)
 	public ModelAndView loadDataset(Model model)
 	{
-		System.out.println("loadDataset");
 		List domainList=this.domainService.searchDomain();
 		model.addAttribute("domainList",domainList);
 		model.addAttribute("datasetVO",new DatasetVO());
@@ -40,8 +45,17 @@ public class DatasetController {
 	}
 
 	@RequestMapping(value="/insertDataset")
-	public ModelAndView insertDataset(@ModelAttribute DatasetVO datasetVO)
+	public ModelAndView insertDataset(@ModelAttribute DatasetVO datasetVO, @RequestParam("file") MultipartFile file)
 	{
+		try {
+			// read and write the file to the selected location-
+			byte[] bytes = file.getBytes();
+			Path path = Paths.get(UPLOAD_FOLDER + file.getOriginalFilename());
+			Files.write(path, bytes);
+
+		} catch (IOException e) {
+			e.printStackTrace();
+		}
 		datasetVO.setStatus(true);
 		this.datasetService.insertDataset(datasetVO);
 		return new ModelAndView("redirect:/admin/viewDataset");
