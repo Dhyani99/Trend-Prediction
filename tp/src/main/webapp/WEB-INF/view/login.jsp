@@ -10,11 +10,11 @@
 	<meta name="author" content="">
 
 	<title>Home</title>
-	<link rel="stylesheet" href="adminResource/css/style.min.css">
-<link rel="stylesheet" href="adminResource/css/custom.css">
+	<link rel="stylesheet" href="<%=request.getContextPath() %>/adminResource/css/style.min.css">
+<link rel="stylesheet" href="<%=request.getContextPath() %>/adminResource/css/custom.css">
 
 	<!-- Waves Effect -->
-	<link rel="stylesheet" href="adminResource/css/waves.min.css">
+	<link rel="stylesheet" href="<%=request.getContextPath() %>/adminResource/css/waves.min.css">
 
 </head>
 
@@ -70,19 +70,19 @@
 
 	<!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
 	<!--[if lt IE 9]>
-		<script src="adminResource/js/html5shiv.min.js"></script>
-		<script src="adminResource/js/respond.min.js"></script>
+		<script src="<%=request.getContextPath() %>/adminResource/js/html5shiv.min.js"></script>
+		<script src="<%=request.getContextPath() %>/adminResource/js/respond.min.js"></script>
 	<![endif]-->
 	<!-- 
 	================================================== -->
 	<!-- Placed at the end of the document so the pages load faster -->
-	<script src="adminResource/js/jquery.min.js"></script>
-	<script src="adminResource/js/modernizr.min.js"></script>
-	<script src="adminResource/js/bootstrap.min.js"></script>
-	<script src="adminResource/js/nprogress.js"></script>
-	<script src="adminResource/js/waves.min.js"></script>
+	<script src="<%=request.getContextPath() %>/adminResource/js/jquery.min.js"></script>
+	<script src="<%=request.getContextPath() %>/adminResource/js/modernizr.min.js"></script>
+	<script src="<%=request.getContextPath() %>/adminResource/js/bootstrap.min.js"></script>
+	<script src="<%=request.getContextPath() %>/adminResource/js/nprogress.js"></script>
+	<script src="<%=request.getContextPath() %>/adminResource/js/waves.min.js"></script>
 
-	<script src="adminResource/js/main.min.js"></script>
-<script src="adminResource/js/mycommon.js"></script>
+	<script src="<%=request.getContextPath() %>/adminResource/js/main.min.js"></script>
+<script src="<%=request.getContextPath() %>/adminResource/js/mycommon.js"></script>
 </body>
 </html>
