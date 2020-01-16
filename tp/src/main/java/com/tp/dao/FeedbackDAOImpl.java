@@ -11,7 +11,7 @@ import org.springframework.stereotype.Repository;
 import com.tp.model.FeedbackVO;
 
 @Repository
-public class FeedbackDAOImpl {
+public class FeedbackDAOImpl implements FeedbackDAO{
 
 	@Autowired 
 	SessionFactory sessionFactory;

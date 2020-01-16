@@ -213,74 +213,29 @@
 		<div class="row small-spacing">
 			<div class="col-12">
 				<div class="box-content">
-					<form data-toggle="validator" action="insertFeedback">
+					<%@taglib prefix="f" uri="http://www.springframework.org/tags/form" %>
+					<f:form data-toggle="validator" action="insertFeedback" modelAttribute="feedbackVO">
 					<h1 class="page-title">ADD FEEDBACK</h1>
 						<div class="form-group">
 							<label for="inputName" class="control-label">Feedback: </label>
-							<textarea class="form-control" id="inp-type-5" placeholder="Enter your feedback"></textarea><br>
+							<f:textarea path="feedback" class="form-control" id="inp-type-5" placeholder="Enter your feedback"></f:textarea><br>
 						</div>
-						<!-- <div class="form-group has-feedback">
-							<label for="inputTwitter" class="control-label">Twitter</label>
-							<div class="input-group">
-								<span class="input-group-addon">@</span>
-								<input type="text" pattern="^[_A-z0-9]{1,}$" maxlength="15" class="form-control" id="inputTwitter" placeholder="1000hz" required>
-							</div>
-							<span class="glyphicon form-control-feedback" aria-hidden="true"></span>
-							<div class="help-block with-errors">Hey look, this one has feedback icons!</div>
-						</div> 
+						<f:hidden path="loginVO.loginId"/>
 						<div class="form-group">
-							<label for="inputEmail" class="control-label">Email</label>
-							<input type="email" class="form-control" id="inputEmail" placeholder="Email" data-error="Bruh, that email address is invalid" required>
-							<div class="help-block with-errors"></div>
-						</div>
-						<div class="form-group">
-							<label for="inputPassword" class="control-label">Password</label>
-							<div class="row">
-								<div class="form-group col-md-6">
-									<input type="password" data-minlength="6" class="form-control" id="inputPassword" placeholder="Password" required>
-									<div class="help-block">Minimum of 6 characters</div>
-								</div>
-								<div class="form-group col-md-6">
-									<input type="password" class="form-control" id="inputPasswordConfirm" data-match="#inputPassword" data-match-error="Whoops, these don't match" placeholder="Confirm" required>
-									<div class="help-block with-errors"></div>
-								</div>
-							</div>
-						</div>
-						<div class="form-group">
-							<div class="radio">
-								<input type="radio" name="underwear" id="underwear1" required>
-								<label for="underwear1">Boxers</label>
-							</div>
-							<div class="radio">
-								<input type="radio" name="underwear" id="underwear2" required>
-								<label for="underwear2">Briefs</label>
-							</div>
-						</div>
-						<div class="form-group">
-							<div class="checkbox">
-								<input type="checkbox" id="terms" data-error="Before you wreck yourself" required>
-								<label for="terms">Check yourself</label>
-								<div class="help-block with-errors"></div>
-							</div>
-						</div>-->
-						<div class="form-group">
-								<label for="inp-type-5" class="control-label">Rating: </label>
-								<span class="ico ti-star"></span>
-								<span class="icon-name"></span>
-								<span class="ico ti-star"></span>
-								<span class="icon-name"></span>
-								<span class="ico ti-star"></span>
-								<span class="icon-name"></span>
-								<span class="ico ti-star"></span>
-								<span class="icon-name"></span>
-								<span class="ico ti-star"></span>
-								<span class="icon-name"></span>
-								
+							
+							<div class="rating">
+								<label for="inp-type-5" class="control-label">Rating: </label>								
+								<f:radiobutton id="star5" path="rating" value="5" /><label for="star5" title="Rocks!"><span class="fa fa-star checked "></span></label>
+								<f:radiobutton id="star4" path="rating" value="4" /><label for="star4" title="Pretty good"><span class="fa fa-star checked"></span></label>
+							    <f:radiobutton id="star3" path="rating" value="3" /><label for="star3" title="Meh"><span class="fa fa-star checked"></span></label>
+							    <f:radiobutton id="star2" path="rating" value="2" /><label for="star2" title="Kinda bad"><span class="fa fa-star checked"></span></label>
+							    <f:radiobutton id="star1" path="rating" value="1" /><label for="star1" title="Sucks big time"><span class="fa fa-star checked"></span></label>
+						    </div>
 						</div>
 						<div class="form-group">
 							<button type="submit" class="btn btn-primary waves-effect waves-light">Submit</button>
 						</div>
-					</form>
+					</f:form>
 				</div>
 				<!-- /.box-content -->
 			</div>
