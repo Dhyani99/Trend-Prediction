@@ -36,8 +36,41 @@ public class ComplainVO {
 	@Column(name="complain_status")
 	private String complainStatus;
 	
-	@Column(name="reply")
+	@Column(name="replyDate")
 	private Date replyDate;
+
+	@Column(name="reply")
+	private String reply;
+	
+	@Column(name="file_name")
+	private String fileName;
+	
+	@Column(name="file_path")
+	private String filePath;
+	
+	public String getFileName() {
+		return fileName;
+	}
+
+	public void setFileName(String fileName) {
+		this.fileName = fileName;
+	}
+
+	public String getFilePath() {
+		return filePath;
+	}
+
+	public void setFilePath(String filePath) {
+		this.filePath = filePath;
+	}
+
+	public String getReply() {
+		return reply;
+	}
+
+	public void setReply(String reply) {
+		this.reply = reply;
+	}
 
 	public int getId() {
 		return id;
