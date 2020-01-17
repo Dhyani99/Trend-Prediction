@@ -54,7 +54,7 @@ public class ComplainController {
 		this.complainService.insertComplain(complainVO);
 		return new ModelAndView("redirect:/user/index");
 	}
-	
+
 	@RequestMapping(value="/admin/viewComplain")
 	public ModelAndView viewComplain()
 	{
