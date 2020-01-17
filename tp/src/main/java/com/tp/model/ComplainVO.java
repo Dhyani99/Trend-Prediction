@@ -30,6 +30,18 @@ public class ComplainVO {
 	@Column(name="complain_description")
 	private String complainDescription;
 	
+	@Column(name="complain_date")
+	private String complainDate;
+	
+	
+	public String getComplainDate() {
+		return complainDate;
+	}
+
+	public void setComplainDate(String complainDate) {
+		this.complainDate = complainDate;
+	}
+
 	@Column(name="status")
 	private boolean status=false;
 
@@ -77,6 +89,7 @@ public class ComplainVO {
 	}
 
 	public void setId(int id) {
+		
 		this.id = id;
 	}
 
