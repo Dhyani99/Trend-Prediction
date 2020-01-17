@@ -30,18 +30,6 @@ public class ComplainVO {
 	@Column(name="complain_description")
 	private String complainDescription;
 	
-	@Column(name="complain_date")
-	private String complainDate;
-	
-	
-	public String getComplainDate() {
-		return complainDate;
-	}
-
-	public void setComplainDate(String complainDate) {
-		this.complainDate = complainDate;
-	}
-
 	@Column(name="status")
 	private boolean status=false;
 
@@ -49,7 +37,7 @@ public class ComplainVO {
 	private String complainStatus;
 	
 	@Column(name="replyDate")
-	private Date replyDate;
+	private String replyDate;
 
 	@Column(name="reply")
 	private String reply;
@@ -59,6 +47,9 @@ public class ComplainVO {
 	
 	@Column(name="file_path")
 	private String filePath;
+	
+	@Column(name="complain_date")
+	private String complainDate;
 	
 	public String getFileName() {
 		return fileName;
@@ -89,7 +80,6 @@ public class ComplainVO {
 	}
 
 	public void setId(int id) {
-		
 		this.id = id;
 	}
 
@@ -133,11 +123,19 @@ public class ComplainVO {
 		this.complainStatus = complainStatus;
 	}
 
-	public Date getReplyDate() {
+	public String getReplyDate() {
 		return replyDate;
 	}
 
-	public void setReplyDate(Date replyDate) {
+	public void setReplyDate(String replyDate) {
 		this.replyDate = replyDate;
+	}
+
+	public String getComplainDate() {
+		return complainDate;
+	}
+
+	public void setComplainDate(String complainDate) {
+		this.complainDate = complainDate;
 	}
 }

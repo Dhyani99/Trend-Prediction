@@ -10,6 +10,7 @@ import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
+import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.servlet.ModelAndView;
 
 import com.tp.model.ComplainVO;
@@ -39,13 +40,13 @@ public class ComplainController {
 		complainVO.setStatus(true);
 		complainVO.setComplainStatus("Pending");
 		
-		Basemethods bm=new Basemethods();
-		String user=bm.getUser();
+		String user=Basemethods.getUser();
 		loginVO.setUsername(user);
-		loginservice.searchLoginID(user);
+		List userList=loginservice.searchLoginID(user);
+		complainVO.setLoginVO((LoginVO)userList.get(0));
 		
 		Date date=new Date();
-		String setDateFormat="dd/mm/yyyy";
+		String setDateFormat="dd/MM/yyyy";
 		DateFormat dateformat=new SimpleDateFormat(setDateFormat);
 		String formattedDate=dateformat.format(date);
 		complainVO.setComplainDate(formattedDate);
@@ -54,11 +55,41 @@ public class ComplainController {
 		this.complainService.insertComplain(complainVO);
 		return new ModelAndView("redirect:/user/index");
 	}
+	
+	@RequestMapping(value="/admin/insertReply")
+	public ModelAndView insertReply(@ModelAttribute ComplainVO complainVO,@ModelAttribute LoginVO loginVO)
+	{
+		complainVO.setStatus(false);
+		complainVO.setComplainStatus("Resolved");
+		
+		String user=Basemethods.getUser();
+		loginVO.setUsername(user);
+		List userList=loginservice.searchLoginID(user);
+		complainVO.setLoginVO((LoginVO)userList.get(0));
+		
+		Date date=new Date();
+		String setDateFormat="dd/MM/yyyy";
+		DateFormat dateformat=new SimpleDateFormat(setDateFormat);
+		String formattedDate=dateformat.format(date);
+		complainVO.setReplyDate(formattedDate);
+		
+		
+		this.complainService.insertComplain(complainVO);
+		return new ModelAndView("redirect:/admin/index");
+	}
 
 	@RequestMapping(value="/admin/viewComplain")
 	public ModelAndView viewComplain()
 	{
 		List complainList=this.complainService.searchComplain();
 		return new ModelAndView("admin/viewComplain","complainList",complainList);
+	}
+	
+	@RequestMapping(value="/admin/reply")
+	public ModelAndView replyComplain(@RequestParam int id,@ModelAttribute ComplainVO complainVO)
+	{
+		complainVO.setId(id);
+		List complainList=this.complainService.findByIdComplain(complainVO);
+		return new ModelAndView("admin/addReply","complainVO",(ComplainVO)complainList.get(0));
 	}
 }

@@ -30,9 +30,9 @@ public class LoginDAOImpl implements LoginDAO {
 		session.saveOrUpdate(loginVO);
 	}
 	@Override
-	public List searchLoginID(String loginService) {
+	public List searchLoginID(String user) {
 		Session session = this.sessionFactory.getCurrentSession();
-		Query q = session.createQuery("from LoginVO where username = '"+loginService+"' ");
+		Query q = session.createQuery("from LoginVO where username = '"+user+"' ");
 		List ls = q.list();
 		return ls;
 	}

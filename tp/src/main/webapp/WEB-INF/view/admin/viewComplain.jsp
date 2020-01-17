@@ -187,7 +187,7 @@
 			<div class="row small-spacing">
 				<div class="col-12">
 					<div class="box-content">
-						<h4 class="box-title">Default</h4>
+						<h4 class="box-title">VIEW COMPLAIN</h4>
 						<!-- /.box-title -->
 						<div class="dropdown js__drop_down">
 							<a href="#"
@@ -209,11 +209,12 @@
 								<tr>
 									<th>Complain Id</th>
 									<th>Complain Subject</th>
-									<th>Complain Description/th>
+									<th>Complain Description</th>
 									<th>Complain Date</th>
 									<th>Reply</th>
 									<th>Reply Date</th>
 									<th>Login Id</th>
+									<th>Action</th>
 								</tr>
 								
 							</thead>
@@ -228,7 +229,7 @@
 									<td> </td>
 									<td> </td>
 									<td>${i.loginVO.loginId}</td>
-									<td><a href="editDataset.html?id=${i.id}"><i class="menu-icon fa fa-edit" aria-hidden="true"></i></a><c:out value=" "></c:out>&nbsp&nbsp&nbsp&nbsp<a href="deleteDataset.html?id=${i.id}"><i class="menu-icon fa fa-trash-alt" aria-hidden="true"></i></a></td>
+									<td><button><a href="reply?id=${i.id}">Reply</a></button></td>
 								</tr>
 							</c:forEach>
 								<!-- <tr>
