@@ -218,6 +218,19 @@
 								
 							</thead>
 							<tbody>
+							
+							<c:forEach var="i" items="${complainList}">
+								<tr>
+									<td>${i.id}</td>
+									<td>${i.complainSubject}</td>
+									<td>${i.complainDescription}</td>
+									<td>${i.complainDate}</td>
+									<td> </td>
+									<td> </td>
+									<td>${i.loginVO.loginId}</td>
+									<td><a href="editDataset.html?id=${i.id}"><i class="menu-icon fa fa-edit" aria-hidden="true"></i></a><c:out value=" "></c:out>&nbsp&nbsp&nbsp&nbsp<a href="deleteDataset.html?id=${i.id}"><i class="menu-icon fa fa-trash-alt" aria-hidden="true"></i></a></td>
+								</tr>
+							</c:forEach>
 								<!-- <tr>
 									<td>Tiger Nixon</td>
 									<td>System Architect</td>
