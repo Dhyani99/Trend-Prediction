@@ -3,6 +3,7 @@ package com.tp.service;
 import java.util.List;
 
 import com.tp.model.ComplainVO;
+import com.tp.model.LoginVO;
 
 public interface ComplainService {
 
@@ -11,4 +12,6 @@ public interface ComplainService {
 	public List findByIdComplain(ComplainVO complainVO);
 	
 	public List searchComplain();
+
+	public List searchUserComplain(LoginVO loginId);
 }

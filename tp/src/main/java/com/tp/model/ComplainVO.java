@@ -31,7 +31,7 @@ public class ComplainVO {
 	private String complainDescription;
 	
 	@Column(name="status")
-	private boolean status=false;
+	private boolean status=true;
 
 	@Column(name="complain_status")
 	private String complainStatus;

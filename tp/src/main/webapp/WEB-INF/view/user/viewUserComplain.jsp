@@ -10,7 +10,7 @@
 <meta name="description" content="">
 <meta name="author" content="">
 
-<title>Datatables - SpaceX Template</title>
+<title>View Complain</title>
 <%@taglib prefix="c" uri="http://java.sun.com/jstl/core_rt" %>
 
 <!-- Main Styles -->
@@ -187,7 +187,7 @@
 			<div class="row small-spacing">
 				<div class="col-12">
 					<div class="box-content">
-						<h4 class="box-title">Default</h4>
+						<h4 class="box-title">VIEW COMPLAIN</h4>
 						<!-- /.box-title -->
 						<div class="dropdown js__drop_down">
 							<a href="#"
@@ -207,19 +207,29 @@
 							style="width: 100%">
 							<thead>
 								<tr>
-									<th>Feedback Id</th>
-									<th>Feedback</th>
-									<th>Login Id</th>									
+									<th>Complain Id</th>
+									<th>Complain Subject</th>
+									<th>Complain Description</th>
+									<th>Complain Date</th>
+									<th>Reply</th>
+									<th>Reply Date</th>
+									<th>Complain Status</th>
 								</tr>
 							</thead>
-							<tbody> 
- 							<c:forEach var="i" items="${feedbackList}">
+							<tbody>
+							
+							<c:forEach var="i" items="${complainList}">
 								<tr>
 									<td>${i.id}</td>
-									<td>${i.feedback}</td>
-									<td>${i.loginVO.loginId}</td>
+									<td>${i.complainSubject}</td>
+									<td>${i.complainDescription}</td>
+									<td>${i.complainDate}</td>
+									<td>${i.reply}</td>
+									<td>${i.replyDate}</td>
+									<td>${i.complainStatus}</td>
 								</tr>
 							</c:forEach>
+								
 							</tbody>
 						</table>
 					</div>

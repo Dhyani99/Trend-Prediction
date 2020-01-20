@@ -226,10 +226,18 @@
 									<td>${i.complainSubject}</td>
 									<td>${i.complainDescription}</td>
 									<td>${i.complainDate}</td>
-									<td> </td>
-									<td> </td>
+									<td>${i.reply}</td>
+									<td>${i.replyDate}</td>
 									<td>${i.loginVO.loginId}</td>
-									<td><button><a href="reply?id=${i.id}">Reply</a></button></td>
+									
+									<td>
+										<c:if test="${i.complainStatus eq 'Pending'}">
+											<button><a href="reply?id=${i.id}">Reply</a></button>
+										</c:if>
+										<c:if test="${i.complainStatus ne 'Pending'}">
+											<button disabled="disabled">Resolved</a></button>
+										</c:if>
+									</td>
 								</tr>
 							</c:forEach>
 								<!-- <tr>

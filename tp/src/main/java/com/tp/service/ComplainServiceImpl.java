@@ -37,6 +37,11 @@ public class ComplainServiceImpl implements ComplainService{
 		return this.complainDAO.findByIdComplain(complainVO);
 	}
 
+	@Override
+	public List searchUserComplain(LoginVO loginId) {
+		return this.complainDAO.searchUserComplain(loginId);
+	}
+
 		
 
 }

@@ -218,16 +218,18 @@
 					<h1 class="page-title">ADD REPLY</h1>
 						<div class="form-group">
 							<label for="inputName" class="control-label">Complain Subject: </label>
-							<f:input path="complainSubject" class="form-control" id="inputName" placeholder="Enter complain subject" required="true"/>
+							<f:input path="complainSubject" class="form-control" id="inputName" placeholder="Enter complain subject" required="true" readonly="true"/>
 							<f:hidden path="id"/>
 						</div>
 						<div class="form-group">
 								<label for="inp-type-5" class="control-label">Complain Description: </label>
-								<f:textarea path="complainDescription" class="form-control" id="inp-type-5" placeholder="Enter complain description"/>
+								<f:textarea path="complainDescription" class="form-control" id="inp-type-5" placeholder="Enter complain description" readonly="true"/>
 						</div>
 						<div class="form-group">
 								<label for="inp-type-5" class="control-label">Reply: </label>
 								<f:textarea path="reply" class="form-control" id="inp-type-5" placeholder="Enter reply"/><br>
+								<f:hidden path="complainDate"/>
+								<f:hidden path="loginVO.loginId"/>
 						</div>
 						<div class="form-group">
 							<button type="submit" class="btn btn-primary waves-effect waves-light">Submit</button>

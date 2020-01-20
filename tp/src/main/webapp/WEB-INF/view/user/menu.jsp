@@ -99,6 +99,7 @@
 					<a class="waves-effect parent-item js__control" href="#"><i class="menu-icon ti-headphone-alt"></i><span>Manage Complain</span><span class="menu-arrow fa fa-angle-down"></span></a>
 					<ul class="sub-menu js__content">
 						<li><a href="loadComplain">Add Complain</a></li>
+						<li><a href="viewUserComplain">View Complain</a></li>
 						<!-- <li><a href="ui-cards.html">Cards</a></li>
 						<li><a href="ui-checkbox-radio.html">Checkboxs-Radios</a></li>
 						<li><a href="ui-components.html">Components</a></li>

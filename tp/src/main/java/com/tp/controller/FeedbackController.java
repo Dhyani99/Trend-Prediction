@@ -10,13 +10,19 @@ import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.servlet.ModelAndView;
 
 import com.tp.model.FeedbackVO;
+import com.tp.model.LoginVO;
 import com.tp.service.FeedbackService;
+import com.tp.service.LoginService;
+import com.tp.utils.Basemethods;
 
 @Controller
 public class FeedbackController {
 
 	@Autowired
 	FeedbackService feedbackService;
+	
+	@Autowired
+	LoginService loginService;
 	
 	@RequestMapping(value="/user/loadFeedback", method=RequestMethod.GET)
 	public ModelAndView loadFeedback()
@@ -25,9 +31,13 @@ public class FeedbackController {
 	}
 
 	@RequestMapping(value="/user/insertFeedback")
-	public ModelAndView insertFeedback(@ModelAttribute FeedbackVO feedbackVO)
+	public ModelAndView insertFeedback(@ModelAttribute FeedbackVO feedbackVO,@ModelAttribute LoginVO loginVO)
 	{
 		feedbackVO.setStatus(true);
+		String user=Basemethods.getUser();
+		loginVO.setUsername(user);
+		List userList=loginService.searchLoginID(user);
+		feedbackVO.setLoginVO((LoginVO)userList.get(0));
 		this.feedbackService.insertFeedback(feedbackVO);
 		return new ModelAndView("redirect:/user/index");
 	}
