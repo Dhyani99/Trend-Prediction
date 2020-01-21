@@ -30,7 +30,7 @@ public class FeedbackController {
 		return new ModelAndView("user/addFeedback","feedbackVO", new FeedbackVO());
 	}
 
-	@RequestMapping(value="/user/insertFeedback")
+	@RequestMapping(value="/user/insertFeedback", method=RequestMethod.POST)
 	public ModelAndView insertFeedback(@ModelAttribute FeedbackVO feedbackVO,@ModelAttribute LoginVO loginVO)
 	{
 		feedbackVO.setStatus(true);

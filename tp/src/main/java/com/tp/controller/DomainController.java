@@ -28,7 +28,7 @@ public class DomainController {
 		return new ModelAndView("admin/addDomain","domainVO", new DomainVO());
 	}
 
-	@RequestMapping(value="/insertDomain")
+	@RequestMapping(value="/insertDomain", method=RequestMethod.POST)
 	public ModelAndView insertDomain(@ModelAttribute DomainVO domainVO)
 	{
 		domainVO.setStatus(true);
@@ -42,7 +42,7 @@ public class DomainController {
 		return new ModelAndView("admin/viewDomain","domainList",domainList);
 	}
 	
-	@RequestMapping(value="/editDomain", method=RequestMethod.GET)
+	@RequestMapping(value="/editDomain", method=RequestMethod.POST)
 	public ModelAndView findByIdDomain(@ModelAttribute DomainVO domainVO, @RequestParam int id, Model model)
 	{
 		domainVO.setId(id);

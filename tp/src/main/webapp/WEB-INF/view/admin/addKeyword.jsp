@@ -216,7 +216,7 @@
 		<div class="row small-spacing">
 			<div class="col-12">
 				<div class="box-content">
-					<f:form data-toggle="validator" action="insertKeyword" modelAttribute="keywordVO">
+					<f:form data-toggle="validator" action="insertKeyword" modelAttribute="keywordVO" method="post">
 					<h1 class="page-title">Add Keyword</h1>
 						<div class="form-group">
 						

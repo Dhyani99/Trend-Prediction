@@ -10,7 +10,7 @@
 <meta name="description" content="">
 <meta name="author" content="">
 
-<title>Datatables - SpaceX Template</title>
+<title>View Feedback</title>
 <%@taglib prefix="c" uri="http://java.sun.com/jstl/core_rt" %>
 
 <!-- Main Styles -->
@@ -209,6 +209,7 @@
 								<tr>
 									<th>Feedback Id</th>
 									<th>Feedback</th>
+									<th>Rating</th>
 									<th>Login Id</th>									
 								</tr>
 							</thead>
@@ -217,6 +218,7 @@
 								<tr>
 									<td>${i.id}</td>
 									<td>${i.feedback}</td>
+									<td>${i.rating} </td>
 									<td>${i.loginVO.loginId}</td>
 								</tr>
 							</c:forEach>

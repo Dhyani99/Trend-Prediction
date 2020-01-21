@@ -214,7 +214,7 @@
 			<div class="col-12">
 				<div class="box-content">
 				<%@taglib prefix="f" uri="http://www.springframework.org/tags/form"%>
-					<f:form data-toggle="validator" action="insertComplain" modelAttribute="complainVO">
+					<f:form data-toggle="validator" action="insertComplain" modelAttribute="complainVO" method="post">
 					<h1 class="page-title">ADD COMPLAIN</h1>
 						<div class="form-group">
 							<label for="inputName" class="control-label">Complain Subject: </label>

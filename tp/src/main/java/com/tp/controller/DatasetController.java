@@ -15,6 +15,9 @@ import org.springframework.web.servlet.ModelAndView;
 import com.tp.model.DatasetVO;
 import com.tp.service.DatasetService;
 import com.tp.service.DomainService;
+
+import java.io.BufferedOutputStream;
+import java.io.FileOutputStream;
 import java.io.IOException;
 import java.nio.file.Files;
 import java.nio.file.Path;
@@ -30,7 +33,7 @@ public class DatasetController {
 	@Autowired
 	DomainService domainService;
 	
-	private static String UPLOAD_FOLDER = "E:\\Projectsem8\\workspace\\files storage\\";
+	private static String UPLOAD_FOLDER = "E:\\Projectsem8\\workspace\\datasetfiles\\";
 	@RequestMapping(value="/loadDataset", method=RequestMethod.GET)
 	public ModelAndView loadDataset(Model model)
 	{
@@ -39,20 +42,31 @@ public class DatasetController {
 		model.addAttribute("datasetVO",new DatasetVO());
 		return new ModelAndView("admin/addDataset");
 	}
+	
+	
+	
 
-	@RequestMapping(value="/insertDataset")
+	@RequestMapping(value="/insertDataset",method=RequestMethod.POST)
 	public ModelAndView insertDataset(@ModelAttribute DatasetVO datasetVO, @RequestParam("file") MultipartFile file)
 	{
+		String fileName = file.getOriginalFilename();
 		try {
-			// read and write the file to the selected location-
-			byte[] bytes = file.getBytes();
+			byte[] b = file.getBytes();
 			Path path = Paths.get(UPLOAD_FOLDER + file.getOriginalFilename());
-			Files.write(path, bytes);
 
+			BufferedOutputStream bufferedOutputStream = new BufferedOutputStream(new FileOutputStream(path+fileName));
+			
+			bufferedOutputStream.write(b);
+			datasetVO.setStatus(true);
+			datasetVO.setFilePath(path.toString()); 
+			datasetVO.setFileName(fileName);	
+			bufferedOutputStream.flush();
+			bufferedOutputStream.close();
+		
 		} catch (IOException e) {
 			e.printStackTrace();
 		}
-		datasetVO.setStatus(true);
+		
 		this.datasetService.insertDataset(datasetVO);
 		return new ModelAndView("redirect:/admin/viewDataset");
 	}
@@ -63,7 +77,7 @@ public class DatasetController {
 		return new ModelAndView("admin/viewDataset","datasetList",datasetList);
 	}
 	
-	@RequestMapping(value="/editDataset", method=RequestMethod.GET)
+	@RequestMapping(value="/editDataset", method=RequestMethod.POST)
 	public ModelAndView findByIdDataset(@ModelAttribute DatasetVO datasetVO, @RequestParam int id, Model model)
 	{
 		datasetVO.setId(id);

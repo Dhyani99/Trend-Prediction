@@ -35,7 +35,7 @@ public class KeywordController {
 		return new ModelAndView("admin/addKeyword");
 	}
 
-	@RequestMapping(value="/insertKeyword")
+	@RequestMapping(value="/insertKeyword", method=RequestMethod.POST)
 	public ModelAndView insertKeyword(@ModelAttribute KeywordVO keywordVO)
 	{
 		keywordVO.setStatus(true);
@@ -50,7 +50,7 @@ public class KeywordController {
 		return new ModelAndView("admin/viewKeyword","keywordList",keywordList);
 	}
 	
-	@RequestMapping(value="/editKeyword", method=RequestMethod.GET)
+	@RequestMapping(value="/editKeyword", method=RequestMethod.POST)
 	public ModelAndView findByIdKeyword(@ModelAttribute KeywordVO keywordVO, @RequestParam int id, Model model)
 	{
 		keywordVO.setId(id);

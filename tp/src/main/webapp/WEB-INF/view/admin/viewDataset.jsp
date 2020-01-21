@@ -10,7 +10,7 @@
 <meta name="description" content="">
 <meta name="author" content="">
 
-<title>Datatables - SpaceX Template</title>
+<title>View Dataset</title>
 <%@taglib prefix="c" uri="http://java.sun.com/jstl/core_rt" %>
 
 <!-- Main Styles -->
@@ -209,6 +209,8 @@
 								<tr>
 									<th>Domain Name</th>
 									<th>Dataset Name</th>
+									<th>Dataset File Name</th>
+									<th>Dataset File Path</th>
 									<th>Dataset Description</th>
 									<th>Action</th>
 								</tr>
@@ -226,6 +228,8 @@
 								<tr>
 									<td>${i.domainVO.domainName}</td>
 									<td>${i.datasetName}</td>
+									<td>${i.fileName}</td>
+									<td>${i.filePath}</td>
 									<td>${i.datasetDescription}</td>
 									<td><a href="editDataset.html?id=${i.id}"><i class="menu-icon fa fa-edit" aria-hidden="true"></i></a><c:out value=" "></c:out>&nbsp&nbsp&nbsp&nbsp<a href="deleteDataset.html?id=${i.id}"><i class="menu-icon fa fa-trash-alt" aria-hidden="true"></i></a></td>
 								</tr>

@@ -27,6 +27,69 @@
 	<!-- Sweet Alert -->
 	<link rel="stylesheet" href="<%=request.getContextPath() %>/adminResource/css/sweetalert.css">
 	
+<%-- 	<link rel="stylesheet" href="<%=request.getContextPath() %>/adminResource/css/star.css"> --%>
+	<link rel="shortcut icon" href="assets/images/favicon.ico">
+	<link href="<%=request.getContextPath()%>/adminResources/css/bootstrap.min.css" rel="stylesheet" type="text/css">
+    <link href="<%=request.getContextPath()%>/adminResources/css/icons.css" rel="stylesheet" type="text/css">
+    <link href="<%=request.getContextPath()%>/adminResources/css/style.css" rel="stylesheet" type="text/css">
+    <link href="<%=request.getContextPath()%>/adminResources/css/rating.css" rel="stylesheet" type="text/css">
+    <style type="text/css">
+.rating {
+    float:left;
+}
+
+/* :not(:checked) is a filter, so that browsers that don’t support :checked don’t 
+   follow these rules. Every browser that supports :checked also supports :not(), so
+   it doesn’t make the test unnecessarily selective */
+.rating:not(:checked) > input {
+    position:absolute;
+    top:-9999px;
+    clip:rect(0,0,0,0);
+}
+
+.rating:not(:checked) > label {
+    float:right;
+    width:2em;
+    padding:0 .01em;
+    overflow:hidden;
+    white-space:nowrap;
+    cursor:pointer;
+    font-size:200%;
+    line-height:1.2;
+    color:#ddd;
+    text-shadow:1px 1px #bbb, 2px 2px #666, .1em .1em .2em rgba(0,0,0,.5);
+}
+
+.rating:not(:checked) > label:before {
+    content: ' ';
+}
+
+.rating > input:checked ~ label {
+    color: #f70;
+    text-shadow:1px 1px #c60, 2px 2px #940, .1em .1em .2em rgba(0,0,0,.5);
+}
+
+.rating:not(:checked) > label:hover,
+.rating:not(:checked) > label:hover ~ label {
+    color: gold;
+    text-shadow:1px 1px goldenrod, 2px 2px #B57340, .1em .1em .2em rgba(0,0,0,.5);
+}
+
+.rating > input:checked + label:hover,
+.rating > input:checked + label:hover ~ label,
+.rating > input:checked ~ label:hover,
+.rating > input:checked ~ label:hover ~ label,
+.rating > label:hover ~ input:checked ~ label {
+    color: #ea0;
+    text-shadow:1px 1px goldenrod, 2px 2px #B57340, .1em .1em .2em rgba(0,0,0,.5);
+}
+
+.rating > label:active {
+    position:relative;
+    top:2px;
+    left:2px;
+}
+</style>
 </head>
 
 <body>
@@ -46,7 +109,7 @@
 				<a href="#">
 					<span class="avatar"><img src="<%=request.getContextPath() %>/adminResource/image/avatar-sm-1.jpg" alt=""></span>
 					<span class="name">John Doe</span>
-					<span class="desc">Like your post: “Contact Form 7 Multi-Step”</span>
+					<span class="desc">Like your post: âContact Form 7 Multi-Stepâ</span>
 					<span class="time">10 min</span>
 				</a>
 			</li>
@@ -56,7 +119,7 @@
 					
 					/avatar-sm-2.jpg" alt=""></span>
 					<span class="name">Anna William</span>
-					<span class="desc">Like your post: “Facebook Messenger”</span>
+					<span class="desc">Like your post: âFacebook Messengerâ</span>
 					<span class="time">15 min</span>
 				</a>
 			</li>
@@ -72,7 +135,7 @@
 				<a href="#">
 					<span class="avatar"><img src="<%=request.getContextPath() %>/adminResource/image/avatar-1.jpg" alt=""></span>
 					<span class="name">Jennifer</span>
-					<span class="desc">Like your post: “Contact Form 7 Multi-Step”</span>
+					<span class="desc">Like your post: âContact Form 7 Multi-Stepâ</span>
 					<span class="time">45 min</span>
 				</a>
 			</li>
@@ -80,7 +143,7 @@
 				<a href="#">
 					<span class="avatar"><img src="<%=request.getContextPath() %>/adminResource/image/avatar-sm-6.jpg" alt=""></span>
 					<span class="name">Michael Zenaty</span>
-					<span class="desc">Like your post: “Contact Form 7 Multi-Step”</span>
+					<span class="desc">Like your post: âContact Form 7 Multi-Stepâ</span>
 					<span class="time">50 min</span>
 				</a>
 			</li>
@@ -88,7 +151,7 @@
 				<a href="#">
 					<span class="avatar"><img src="<%=request.getContextPath() %>/adminResource/image/avatar-sm-4.jpg" alt=""></span>
 					<span class="name">Simon</span>
-					<span class="desc">Like your post: “Facebook Messenger”</span>
+					<span class="desc">Like your post: âFacebook Messengerâ</span>
 					<span class="time">1 hour</span>
 				</a>
 			</li>
@@ -104,7 +167,7 @@
 				<a href="#">
 					<span class="avatar"><img src="<%=request.getContextPath() %>/adminResource/image/avatar-sm-7.jpg" alt=""></span>
 					<span class="name">Helen 987</span>
-					<span class="desc">Like your post: “Facebook Messenger”</span>
+					<span class="desc">Like your post: âFacebook Messengerâ</span>
 					<span class="time">Yesterday</span>
 				</a>
 			</li>
@@ -112,7 +175,7 @@
 				<a href="#">
 					<span class="avatar"><img src="<%=request.getContextPath() %>/adminResource/image/avatar-2.jpg" alt=""></span>
 					<span class="name">Denise Jenny</span>
-					<span class="desc">Like your post: “Contact Form 7 Multi-Step”</span>
+					<span class="desc">Like your post: âContact Form 7 Multi-Stepâ</span>
 					<span class="time">Oct, 28</span>
 				</a>
 			</li>
@@ -120,7 +183,7 @@
 				<a href="#">
 					<span class="avatar"><img src="<%=request.getContextPath() %>/adminResource/image/avatar-sm-8.jpg" alt=""></span>
 					<span class="name">Thomas William</span>
-					<span class="desc">Like your post: “Facebook Messenger”</span>
+					<span class="desc">Like your post: âFacebook Messengerâ</span>
 					<span class="time">Oct, 27</span>
 				</a>
 			</li>
@@ -214,7 +277,7 @@
 			<div class="col-12">
 				<div class="box-content">
 					<%@taglib prefix="f" uri="http://www.springframework.org/tags/form" %>
-					<f:form data-toggle="validator" action="insertFeedback" modelAttribute="feedbackVO">
+					<f:form data-toggle="validator" action="insertFeedback" modelAttribute="feedbackVO" method="post">
 					<h1 class="page-title">ADD FEEDBACK</h1>
 						<div class="form-group">
 							<label for="inputName" class="control-label">Feedback: </label>
@@ -222,18 +285,18 @@
 						</div>
 						<f:hidden path="loginVO.loginId"/>
 						<div class="form-group">
-							
+							<label for="inp-type-5" class="control-label">Rating: </label><br>		
 							<div class="rating">
-								<label for="inp-type-5" class="control-label">Rating: </label>								
-								<f:radiobutton id="star5" path="rating" value="5" /><label for="star5" title="Rocks!"><span class="fa fa-star checked "></span></label>
-								<f:radiobutton id="star4" path="rating" value="4" /><label for="star4" title="Pretty good"><span class="fa fa-star checked"></span></label>
-							    <f:radiobutton id="star3" path="rating" value="3" /><label for="star3" title="Meh"><span class="fa fa-star checked"></span></label>
-							    <f:radiobutton id="star2" path="rating" value="2" /><label for="star2" title="Kinda bad"><span class="fa fa-star checked"></span></label>
-							    <f:radiobutton id="star1" path="rating" value="1" /><label for="star1" title="Sucks big time"><span class="fa fa-star checked"></span></label>
+													
+								<f:radiobutton id="star5" path="rating" value="5" /><label for="star5" title="Rocks!"><span class="fas fa-star "></span></label>
+								<f:radiobutton id="star4" path="rating" value="4" /><label for="star4" title="Pretty good"><span class="fas fa-star"></span></label>
+							    <f:radiobutton id="star3" path="rating" value="3" /><label for="star3" title="Meh"><span class="fas fa-star"></span></label>
+							    <f:radiobutton id="star2" path="rating" value="2" /><label for="star2" title="Kinda bad"><span class="fas fa-star"></span></label>
+							    <f:radiobutton id="star1" path="rating" value="1" /><label for="star1" title="Sucks big time"><span class="fas fa-star"></span></label>
 						    </div>
 						</div>
 						<div class="form-group">
-							<button type="submit" class="btn btn-primary waves-effect waves-light">Submit</button>
+							<br><br><button type="submit" class="btn btn-primary waves-effect waves-light">Submit</button>
 						</div>
 					</f:form>
 				</div>
@@ -270,5 +333,28 @@
 
 	<script src="<%=request.getContextPath() %>/adminResource/js/main.min.js"></script>
 <script src="<%=request.getContextPath() %>/adminResource/js/mycommon.js"></script>
+
+	<!-- jQuery  -->
+        <script src="<%=request.getContextPath()%>/adminResources/js/jquery.min.js"></script>
+        <script src="<%=request.getContextPath()%>/adminResources/js/bootstrap.min.js"></script>
+        <script src="<%=request.getContextPath()%>/adminResources/js/modernizr.min.js"></script>
+        <script src="<%=request.getContextPath()%>/adminResources/js/detect.js"></script>
+        <script src="<%=request.getContextPath()%>/adminResources/js/fastclick.js"></script>
+        <script src="<%=request.getContextPath()%>/adminResources/js/jquery.slimscroll.js"></script>
+        <script src="<%=request.getContextPath()%>/adminResources/js/jquery.blockUI.js"></script>
+        <script src="<%=request.getContextPath()%>/adminResources/js/waves.js"></script>
+        <script src="<%=request.getContextPath()%>/adminResources/js/wow.min.js"></script>
+        <script src="<%=request.getContextPath()%>/adminResources/js/jquery.nicescroll.js"></script>
+        <script src="<%=request.getContextPath()%>/adminResources/js/jquery.scrollTo.min.js"></script>
+
+        <script type="text/javascript" src="<%=request.getContextPath()%>/adminResources/js/parsley.min.js"></script>
+
+        <script type="text/javascript">
+            $(document).ready(function() {
+                $('form').parsley();
+            });
+        </script>
+
+        <script src="<%=request.getContextPath()%>/adminResources/js/app.js"></script>
 </body>
 </html>

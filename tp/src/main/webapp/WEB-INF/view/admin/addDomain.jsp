@@ -212,7 +212,7 @@
 		<div class="row small-spacing">
 			<div class="col-12">
 				<div class="box-content">
-					<f:form data-toggle="validator" action="insertDomain" modelAttribute="domainVO">
+					<f:form data-toggle="validator" action="insertDomain" modelAttribute="domainVO" method="post">
 						<h1 class="page-title">ADD DOMAIN</h1>
 						<div class="form-group">
 							<label for="inputName" class="control-label">Domain Name:</label>
