@@ -207,7 +207,7 @@
 							style="width: 100%">
 							<thead>
 								<tr>
-									<th>Complain Id</th>
+									<th>No.</th>
 									<th>Complain Subject</th>
 									<th>Complain Description</th>
 									<th>Complain Date</th>
@@ -220,9 +220,9 @@
 							</thead>
 							<tbody>
 							
-							<c:forEach var="i" items="${complainList}">
+							<c:forEach var="i" items="${complainList}" varStatus="j">
 								<tr>
-									<td>${i.id}</td>
+									<td>${j.count}</td>			
 									<td>${i.complainSubject}</td>
 									<td>${i.complainDescription}</td>
 									<td>${i.complainDate}</td>

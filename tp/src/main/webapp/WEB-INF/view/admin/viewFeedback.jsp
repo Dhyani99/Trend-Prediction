@@ -207,16 +207,16 @@
 							style="width: 100%">
 							<thead>
 								<tr>
-									<th>Feedback Id</th>
+									<th>No.</th>
 									<th>Feedback</th>
 									<th>Rating</th>
 									<th>Login Id</th>									
 								</tr>
 							</thead>
 							<tbody> 
- 							<c:forEach var="i" items="${feedbackList}">
+ 							<c:forEach var="i" items="${feedbackList}" varStatus="j">
 								<tr>
-									<td>${i.id}</td>
+									<td>${j.count}</td>
 									<td>${i.feedback}</td>
 									<td>${i.rating} </td>
 									<td>${i.loginVO.loginId}</td>

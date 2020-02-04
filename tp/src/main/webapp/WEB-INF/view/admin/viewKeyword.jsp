@@ -207,6 +207,7 @@
 							style="width: 100%">
 							<thead>
 								<tr>
+									<th>No.</th>
 									<th>Domain Name</th>
 									<th>Keyword Name</th>
 									<th>Action</th>
@@ -221,8 +222,9 @@
 								</tr>
  -->
  
- 							<c:forEach var="i" items="${keywordList}">
+ 							<c:forEach var="i" items="${keywordList}" varStatus="j">
 								<tr>
+									<td>${j.count}</td>
 									<td>${i.domainVO.domainName}</td>
 									<td>${i.keywordName}</td>
 									<td><a href="editKeyword.html?id=${i.id}"><i class="menu-icon fa fa-edit" aria-hidden="true"></i></a><c:out value=" "></c:out>&nbsp&nbsp&nbsp&nbsp<a href="deleteKeyword.html?id=${i.id}"><i class="menu-icon fa fa-trash-alt" aria-hidden="true"></i></a></td>

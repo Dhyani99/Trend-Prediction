@@ -75,7 +75,7 @@ public class SecurityConfiguration extends WebSecurityConfigurerAdapter{
                 .usernameParameter("username")//
                 .passwordParameter("password")
                 // Config for Logout Page
-                .and().logout().permitAll();
+                .and().logout().logoutUrl("/logout").logoutSuccessUrl("/login").permitAll();
  
         // Config Remember Me.
         http.authorizeRequests().and() //

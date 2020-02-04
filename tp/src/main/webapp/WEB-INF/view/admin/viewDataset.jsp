@@ -207,6 +207,7 @@
 							style="width: 100%">
 							<thead>
 								<tr>
+									<th>No.</th>
 									<th>Domain Name</th>
 									<th>Dataset Name</th>
 									<th>Dataset File Name</th>
@@ -224,8 +225,9 @@
 								</tr>
  -->
  
- 							<c:forEach var="i" items="${datasetList}">
+ 							<c:forEach var="i" items="${datasetList}" varStatus="j">
 								<tr>
+									<td>${j.count}</td>
 									<td>${i.domainVO.domainName}</td>
 									<td>${i.datasetName}</td>
 									<td>${i.fileName}</td>

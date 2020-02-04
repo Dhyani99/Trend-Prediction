@@ -207,6 +207,7 @@
 							style="width: 100%">
 							<thead>
 								<tr>
+									<th>No.</th>
 									<th>Domain Name</th>
 									<th>Domain Description</th>
 									<th>Action</th>
@@ -221,8 +222,9 @@
 								</tr>
  -->
  
- 							<c:forEach var="i" items="${domainList}">
+ 							<c:forEach var="i" items="${domainList}" varStatus="j">
 								<tr>
+									<td>${j.count}</td>
 									<td>${i.domainName}</td>
 									<td>${i.domainDescription}</td>
 									<td><a href="editDomain.html?id=${i.id}"><i class="menu-icon fa fa-edit" aria-hidden="true"></i></a><c:out value=" "></c:out>&nbsp&nbsp&nbsp&nbsp<a href="deleteDomain.html?id=${i.id}"><i class="menu-icon fa fa-trash-alt" aria-hidden="true"></i></a></td>
