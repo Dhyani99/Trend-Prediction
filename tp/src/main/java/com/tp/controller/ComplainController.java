@@ -77,7 +77,7 @@ public class ComplainController {
 		complainVO.setComplainDate(formattedDate);
 		
 		this.complainService.insertComplain(complainVO);
-		return new ModelAndView("redirect:/user/viewComplain");
+		return new ModelAndView("redirect:/user/viewUserComplain");
 	}
 	
 	@RequestMapping(value="/admin/insertReply", method=RequestMethod.POST)
