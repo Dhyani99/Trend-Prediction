@@ -34,7 +34,7 @@ public class ComplainController {
 	@Autowired
 	LoginService loginService;
 	
-	private static String UPLOAD_FOLDER = "E:\\Projectsem8\\workspace\\complainfiles\\";
+	private static String UPLOAD_FOLDER = "D:\\Projectsem8\\workspace\\complainfiles\\";
 
 	@RequestMapping(value="/user/loadComplain", method=RequestMethod.GET)
 	public ModelAndView loadComplain()
@@ -77,7 +77,7 @@ public class ComplainController {
 		complainVO.setComplainDate(formattedDate);
 		
 		this.complainService.insertComplain(complainVO);
-		return new ModelAndView("redirect:/user/index");
+		return new ModelAndView("redirect:/user/viewComplain");
 	}
 	
 	@RequestMapping(value="/admin/insertReply", method=RequestMethod.POST)
@@ -113,7 +113,7 @@ public class ComplainController {
 		return new ModelAndView("user/viewUserComplain","complainList",complainList);
 	}
 	
-	@RequestMapping(value="/admin/reply", method=RequestMethod.POST)
+	@RequestMapping(value="/admin/reply", method=RequestMethod.GET)
 	public ModelAndView replyComplain(@RequestParam int id,@ModelAttribute ComplainVO complainVO)
 	{
 		complainVO.setId(id);

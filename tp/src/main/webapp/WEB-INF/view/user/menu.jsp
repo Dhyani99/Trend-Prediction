@@ -1,6 +1,6 @@
 <div class="main-menu">
 	<header class="header">
-		<a href="index.jsp" class="logo"><i class="ico ti-rocket"></i>SpaceX</a>
+		<a href="index.jsp" class="logo">Trend Prediction</a>
 		<button type="button" class="button-close fa fa-times js__menu_close"></button>
 	</header>
 	<!-- /.header -->
