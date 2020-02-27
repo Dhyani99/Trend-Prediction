@@ -210,7 +210,7 @@
 									<th>No.</th>
 									<th>User Name</th>
 									<th>First Name</th>
-									<th>Last File Name</th>
+									<th>Last Name</th>
 									<th>Contact Number</th>
 									<th>User ID</th>
 									<th>Action</th>
@@ -228,11 +228,11 @@
  							<c:forEach var="i" items="${userList}" varStatus="j">
 								<tr>
 									<td>${j.count}</td>
-									<td>${i.loginVO.userName}</td>
+									<td>${i.loginVO.username}</td>
 									<td>${i.firstName}</td>
 									<td>${i.lastName}</td>
 									<td>${i.contactNumber}</td>
-									<td>${i.loginVO}</td>
+									<td>${i.loginVO.loginId}</td>
 									<td><a href="editDataset.html?id=${i.id}"><i class="menu-icon fa fa-edit" aria-hidden="true"></i></a><c:out value=" "></c:out>&nbsp&nbsp&nbsp&nbsp<a href="deleteDataset.html?id=${i.id}"><i class="menu-icon fa fa-trash-alt" aria-hidden="true"></i></a></td>
 								</tr>
 							</c:forEach>
