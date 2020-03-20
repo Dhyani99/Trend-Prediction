@@ -36,6 +36,13 @@
 	<!-- FullCalendar -->
 	<link rel="stylesheet" href="<%=request.getContextPath() %>/adminResource/css/fullcalendar.min.css">
 	<link rel="stylesheet" href="<%=request.getContextPath() %>/adminResource/css/fullcalendar.print.css" media='print'>
+	<style>
+	
+	.cardDescription
+	{
+		color: white;
+	}
+	</style>
 
 </head>
 
@@ -224,14 +231,14 @@
 		<c:forEach var="domain" items="${domainList}">
 			<div class="col-xl-4 col-lg-6 col-12">
 				<div class="box-content card bordered-all gray js__card card-closed">
-					<a href="displayKeyword?domainId=${domain.id}"><h4 class="box-title bg-danger with-control">
-						${domain.domainName}
+					<h4 class="box-title bg-danger with-control">
+						<a class="cardDescription" href="displayKeyword?domainId=${domain.id}">${domain.domainName}</a>
 						<span class="controls">
 							<button type="button" class="control fa fa-minus js__card_minus"></button>
 							
 						</span>
 						<!-- /.controls -->
-					</h4></a>
+					</h4>
 					<!-- /.box-title -->
 					<div class="card-content js__card_content" style="display: none;">
 						<p>${domain.domainDescription}</p>
