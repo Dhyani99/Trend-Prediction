@@ -21,9 +21,9 @@ public class KeywordServiceImpl implements KeywordService{
 		this.KeywordDAO.insertKeyword(keywordVO);
 	}
 	
-	public List searchKeyword()
+	public List viewKeyword()
 	{
-		return this.KeywordDAO.searchKeyword();
+		return this.KeywordDAO.viewKeyword();
 	}
 		
 	public List findByIdKeyword(KeywordVO keywordVO)
@@ -31,4 +31,13 @@ public class KeywordServiceImpl implements KeywordService{
 		return this.KeywordDAO.findByIdKeyword(keywordVO);
 	}
 
+	public List findKeywordByDomain(int domainId)
+	{
+		return this.KeywordDAO.findKeywordByDomain(domainId);
+	}
+	
+	public List findTrendingKeywords(int domainId)
+	{
+		return this.KeywordDAO.findTrendingKeywords(domainId);
+	}
 }

@@ -26,4 +26,5 @@ public class UserController {
 		List users=this.registerService.searchUser();
 		return new ModelAndView("admin/viewUser","userList",users);
 	}
+	
 }

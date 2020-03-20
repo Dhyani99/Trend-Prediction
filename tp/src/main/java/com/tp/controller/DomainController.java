@@ -1,5 +1,6 @@
 package com.tp.controller;
 
+import java.util.ArrayList;
 import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
@@ -16,33 +17,32 @@ import com.tp.model.DomainVO;
 import com.tp.service.DomainService;
 
 @Controller
-@RequestMapping("/admin")
 public class DomainController {
 	
 	@Autowired
 	DomainService domainService;
 	
-	@RequestMapping(value="/loadDomain", method=RequestMethod.GET)
+	@RequestMapping(value="/admin/loadDomain", method=RequestMethod.GET)
 	public ModelAndView loadDomain()
 	{
 		return new ModelAndView("admin/addDomain","domainVO", new DomainVO());
 	}
 
-	@RequestMapping(value="/insertDomain", method=RequestMethod.POST)
+	@RequestMapping(value="/admin/insertDomain", method=RequestMethod.POST)
 	public ModelAndView insertDomain(@ModelAttribute DomainVO domainVO)
 	{
 		domainVO.setStatus(true);
 		this.domainService.insertDomain(domainVO);
 		return new ModelAndView("redirect:/admin/viewDomain");
 	}
-	@RequestMapping(value="/viewDomain")
+	@RequestMapping(value="/admin/viewDomain")
 	public ModelAndView viewDomain()
 	{
 		List domainList=this.domainService.searchDomain();
 		return new ModelAndView("admin/viewDomain","domainList",domainList);
 	}
 	
-	@RequestMapping(value="/editDomain", method=RequestMethod.POST)
+	@RequestMapping(value="/admin/editDomain", method=RequestMethod.POST)
 	public ModelAndView findByIdDomain(@ModelAttribute DomainVO domainVO, @RequestParam int id, Model model)
 	{
 		domainVO.setId(id);
@@ -51,7 +51,7 @@ public class DomainController {
 		return new ModelAndView("admin/addDomain");
 	}
 	
-	@RequestMapping(value="/deleteDomain", method=RequestMethod.GET)
+	@RequestMapping(value="/admin/deleteDomain", method=RequestMethod.GET)
 	public ModelAndView deleteDomain(@ModelAttribute DomainVO domainVO, @RequestParam int id)
 	{
 		domainVO.setId(id);
@@ -60,6 +60,20 @@ public class DomainController {
 		domainVOFromList.setStatus(false);
 		this.domainService.insertDomain(domainVOFromList);
 		return new ModelAndView("redirect:/admin/viewDomain");
-	}	
+	}
+	
+	@RequestMapping(value="/user/dashboard", method=RequestMethod.GET)
+	public ModelAndView viewDashboard(Model model)
+	{
+		ArrayList<String> colors= new ArrayList<String>();
+		colors.add("box-title bg-danger with-control");
+		colors.add("box-title bg-success with-control");
+		colors.add("box-title bg-gray with-control");
+		model.addAttribute("colors",colors);
+ 		List domainList=this.domainService.searchDomain();
+		return new ModelAndView("user/dashboard","domainList",domainList);
+	}
+	
+	
 	
 }

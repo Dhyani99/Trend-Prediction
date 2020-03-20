@@ -23,7 +23,7 @@ public class KeywordDAOImpl implements KeywordDAO {
 		session.saveOrUpdate(keywordVO);
 	}
 	
-	public List searchKeyword()
+	public List viewKeyword()
 	{
 		Session session = sessionFactory.openSession();
 		Query q=session.createQuery("from KeywordVO where status=true and domainVO.status=true");
@@ -40,6 +40,30 @@ public class KeywordDAOImpl implements KeywordDAO {
 			List ls=q.list();
 	
 			return ls;
+	}
+
+	@Override
+	public List findKeywordByDomain(int domainId) {
+		
+		Session session = sessionFactory.openSession();
+		
+		Query q=session.createQuery("from KeywordYearwiseVO where domainVO.id="+domainId+" order by frequency DESC");
+		//SELECT keyword, YEAR, COUNT(COUNT) FROM keyword_yearwise WHERE YEAR=2020 GROUP BY keyword, YEAR ORDER BY COUNT(COUNT) DESC LIMIT 30;
+		//SELECT keyword, YEAR, COUNT(COUNT) FROM keywordyearwise GROUP BY keyword, YEAR;
+		List ls=q.list();
+
+		return ls;
+	}
+	
+	public List findTrendingKeywords(int domainId)
+	{
+		Session session = sessionFactory.openSession();
+		
+		Query q=session.createQuery("from KeywordYearwiseVO where domainVO.id="+domainId+" and year=2020 GROUP BY keyword, year ORDER BY count(frequency) DESC");
+		
+		List ls=q.list();
+
+		return ls;
 	}
 
 }

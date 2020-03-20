@@ -17,7 +17,6 @@ import com.tp.service.KeywordService;
 import com.tp.service.DomainService;
 
 @Controller
-@RequestMapping("/admin")
 public class KeywordController {
 
 	@Autowired
@@ -26,7 +25,7 @@ public class KeywordController {
 	@Autowired
 	DomainService domainService;
 	
-	@RequestMapping(value="/loadKeyword", method=RequestMethod.GET)
+	@RequestMapping(value="admin/loadKeyword", method=RequestMethod.GET)
 	public ModelAndView loadKeyword(Model model)
 	{
 		List domainList=this.domainService.searchDomain();
@@ -35,7 +34,7 @@ public class KeywordController {
 		return new ModelAndView("admin/addKeyword");
 	}
 
-	@RequestMapping(value="/insertKeyword", method=RequestMethod.POST)
+	@RequestMapping(value="admin/insertKeyword", method=RequestMethod.POST)
 	public ModelAndView insertKeyword(@ModelAttribute KeywordVO keywordVO)
 	{
 		keywordVO.setStatus(true);
@@ -43,14 +42,16 @@ public class KeywordController {
 		return new ModelAndView("redirect:/admin/viewKeyword");
 	}
 	
-	@RequestMapping(value="/viewKeyword")
+	@RequestMapping(value="admin/viewKeyword")
 	public ModelAndView viewKeyword()
 	{
-		List keywordList=this.keywordService.searchKeyword();
+		List keywordList=this.keywordService.viewKeyword();
 		return new ModelAndView("admin/viewKeyword","keywordList",keywordList);
 	}
 	
-	@RequestMapping(value="/editKeyword", method=RequestMethod.POST)
+	
+	
+	@RequestMapping(value="admin/editKeyword", method=RequestMethod.POST)
 	public ModelAndView findByIdKeyword(@ModelAttribute KeywordVO keywordVO, @RequestParam int id, Model model)
 	{
 		keywordVO.setId(id);
@@ -61,8 +62,8 @@ public class KeywordController {
 		return new ModelAndView("admin/addKeyword");
 	}
 	
-	@RequestMapping(value="/deleteKeyword", method=RequestMethod.GET)
-	public ModelAndView deleteDataset(@ModelAttribute KeywordVO keywordVO, @RequestParam int id)
+	@RequestMapping(value="admin/deleteKeyword", method=RequestMethod.GET)
+	public ModelAndView deleteKeyword(@ModelAttribute KeywordVO keywordVO, @RequestParam int id)
 	{
 		keywordVO.setId(id);
 		List editKeywordList=this.keywordService.findByIdKeyword(keywordVO);
@@ -71,5 +72,21 @@ public class KeywordController {
 		this.keywordService.insertKeyword(keywordVOFromList);
 		return new ModelAndView("redirect:/admin/viewKeyword");
 	}	
+	
+	@RequestMapping(value="user/viewUserKeyword")
+	public ModelAndView viewUserKeyword(@RequestParam int domainId)
+	{
+		
+		List keywordList=this.keywordService.findKeywordByDomain(domainId);
+		return new ModelAndView("user/viewKeyword","keywordList",keywordList);
+	}
+
+	@RequestMapping(value="user/displayKeyword")
+	public ModelAndView viewTrendingKeywords(@RequestParam int domainId)
+	{
+		
+		List keywordList=this.keywordService.findTrendingKeywords(domainId);
+		return new ModelAndView("user/displayKeyword","keywordList",keywordList);
+	}
 
 }

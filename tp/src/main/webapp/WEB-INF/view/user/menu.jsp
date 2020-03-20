@@ -5,14 +5,32 @@
 	</header>
 	<!-- /.header -->
 	<div class="content">
-
+	<%@taglib prefix="x" uri="http://java.sun.com/jstl/core_rt" %>
+	<%@ taglib prefix="s" uri="http://java.sun.com/jstl/sql_rt" %>
 		<div class="navigation">
 			<h5 class="title">Navigation</h5>
 			<!-- /.title -->
 			<ul class="menu js__accordion">
-				<li class="current">
-					<a class="waves-effect" href="index.jsp"><i class="menu-icon ti-dashboard"></i><span>Dashboard</span></a>
+				<li>
+					<a class="waves-effect" href="dashboard"><i class="menu-icon ti-dashboard"></i><span>Dashboard</span></a>
 				</li>
+				<li>
+					<a class="waves-effect parent-item js__control" href="#"><i class="menu-icon  ti-search"></i><span>Domains</span><span class="menu-arrow fa fa-angle-down"></span></a>
+					<ul class="sub-menu js__content">
+					<s:setDataSource driver="com.mysql.jdbc.Driver" url="jdbc:mysql://localhost:3306/trend_prediction" user="root" password="root" var="i"/>
+					<s:query var="j" dataSource="${i}">
+						Select * from domain_table where status=true;
+					</s:query>
+					<x:forEach var="domain" items="${j.rows}">
+						<li><span><a href="viewUserKeyword?domainId=${domain.id}">${domain.domain_name}</a></span></li>
+					</x:forEach>
+						<!-- <li><a href="icons-material-icons.html">Material Design Icons</a></li>
+						<li><a href="icons-material-design-iconic.html">Material Design Iconic Font</a></li>
+						<li><a href="icons-themify-icons.html">Themify Icons</a></li> -->
+					</ul>
+					<!-- /.sub-menu js__content -->
+				</li>
+				
 				<!-- <li>
 					<a class="waves-effect parent-item js__control" href="#"><span class="menu-icon ico ti-user"></span><span>Manage User</span><span class="menu-arrow fa fa-angle-down"></span></a>
 					<ul class="sub-menu js__content">
@@ -63,6 +81,20 @@
 						<li><a href="viewPrediction">View Prediction</a></li>
 					</ul>
 				</li> -->
+				
+			
+				<li>
+					<a class="waves-effect parent-item js__control" href="#"><i class="menu-icon  ti-search"></i><span>Manage Keywords</span><span class="menu-arrow fa fa-angle-down"></span></a>
+					<ul class="sub-menu js__content">
+						<li><a href="loadKeyword">Search Keyword</a></li>
+						<!-- <li><a href="icons-material-icons.html">Material Design Icons</a></li>
+						<li><a href="icons-material-design-iconic.html">Material Design Iconic Font</a></li>
+						<li><a href="icons-themify-icons.html">Themify Icons</a></li> -->
+					</ul>
+					<!-- /.sub-menu js__content -->
+				</li>
+				
+				
 				
 				<li>
 					<a class="waves-effect parent-item js__control" href="#"><i class="menu-icon ti-stats-up"></i><span>Manage Prediction</span><span class="menu-arrow fa fa-angle-down"></span></a>
