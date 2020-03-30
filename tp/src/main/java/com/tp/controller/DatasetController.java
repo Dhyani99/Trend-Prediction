@@ -77,7 +77,7 @@ public class DatasetController {
 		return new ModelAndView("admin/viewDataset","datasetList",datasetList);
 	}
 	
-	@RequestMapping(value="/editDataset", method=RequestMethod.POST)
+	@RequestMapping(value="/editDataset", method=RequestMethod.GET)
 	public ModelAndView findByIdDataset(@ModelAttribute DatasetVO datasetVO, @RequestParam int id, Model model)
 	{
 		datasetVO.setId(id);

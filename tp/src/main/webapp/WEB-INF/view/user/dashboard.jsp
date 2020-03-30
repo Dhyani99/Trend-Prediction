@@ -13,7 +13,7 @@
 	
 	<!-- Main Styles -->
 	<link rel="stylesheet" href="<%=request.getContextPath() %>/adminResource/css/style.min.css">
-<link rel="stylesheet" href="<%=request.getContextPath() %>/adminResource/css/custom.css">
+	<link rel="stylesheet" href="<%=request.getContextPath() %>/adminResource/css/custom.css">
 	
 	<!-- Themify Icon -->
 	<link rel="stylesheet" href="<%=request.getContextPath() %>/adminResource/css/themify-icons.css">

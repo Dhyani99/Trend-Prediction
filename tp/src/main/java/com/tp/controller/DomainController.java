@@ -42,7 +42,7 @@ public class DomainController {
 		return new ModelAndView("admin/viewDomain","domainList",domainList);
 	}
 	
-	@RequestMapping(value="/admin/editDomain", method=RequestMethod.POST)
+	@RequestMapping(value="/admin/editDomain", method=RequestMethod.GET)
 	public ModelAndView findByIdDomain(@ModelAttribute DomainVO domainVO, @RequestParam int id, Model model)
 	{
 		domainVO.setId(id);
@@ -74,6 +74,17 @@ public class DomainController {
 		return new ModelAndView("user/dashboard","domainList",domainList);
 	}
 	
+	@RequestMapping(value="/user/domainRequest", method=RequestMethod.GET)
+	public ModelAndView domainRequest()
+	{
+		return new ModelAndView("user/domainRequest","domainVO", new DomainVO());
+	}
+	@RequestMapping(value="/user/addDomainRequest", method=RequestMethod.POST)
+	public ModelAndView addDomainRequest(@ModelAttribute DomainVO domainVO)
+	{
+		this.domainService.insertDomain(domainVO);
+		return new ModelAndView("redirect:/user/viewDomainRequest");
+	}
 	
 	
 }

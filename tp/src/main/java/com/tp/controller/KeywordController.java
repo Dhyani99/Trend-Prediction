@@ -51,7 +51,7 @@ public class KeywordController {
 	
 	
 	
-	@RequestMapping(value="admin/editKeyword", method=RequestMethod.POST)
+	@RequestMapping(value="admin/editKeyword", method=RequestMethod.GET)
 	public ModelAndView findByIdKeyword(@ModelAttribute KeywordVO keywordVO, @RequestParam int id, Model model)
 	{
 		keywordVO.setId(id);

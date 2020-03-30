@@ -16,7 +16,7 @@
 <!-- Main Styles -->
 <link rel="stylesheet" href="<%=request.getContextPath() %>/adminResource/css/style.min.css">
 <link rel="stylesheet" href="<%=request.getContextPath() %>/adminResource/css/custom.css">
-
+<link rel="stylesheet" href="<%=request.getContextPath() %>/adminResource/css/custom-switch-toggle.css">
 <!-- Themify Icon -->
 <link rel="stylesheet" href="<%=request.getContextPath() %>/adminResource/css/themify-icons.css">
 
@@ -233,7 +233,13 @@
 									<td>${i.lastName}</td>
 									<td>${i.contactNumber}</td>
 									<td>${i.loginVO.loginId}</td>
-									<td><a href="editDataset.html?id=${i.id}"><i class="menu-icon fa fa-edit" aria-hidden="true"></i></a><c:out value=" "></c:out>&nbsp&nbsp&nbsp&nbsp<a href="deleteDataset.html?id=${i.id}"><i class="menu-icon fa fa-trash-alt" aria-hidden="true"></i></a></td>
+									<td>
+									<label class="switch">
+											<input onclick="toggleUser(${i.loginVO.loginId},this.checked)"
+												   type="checkbox" ${i.loginVO.enabled.trim().equals("1")?"checked":""}>
+											<span class="slider round"></span>
+										</label>
+									</td>
 								</tr>
 							</c:forEach>
 							</tbody>
@@ -251,6 +257,7 @@
 	<!-- 
 		================================================== -->
 	<!-- Placed at the end of the document so the pages load faster -->
+	<script src="<%=request.getContextPath() %>/adminResource/js/customAjaxHandler.js"></script>
 	<script src="<%=request.getContextPath() %>/adminResource/js/jquery.min.js"></script>
 	<script src="<%=request.getContextPath() %>/adminResource/js/modernizr.min.js"></script>
 	<script src="<%=request.getContextPath() %>/adminResource/js/bootstrap.min.js"></script>

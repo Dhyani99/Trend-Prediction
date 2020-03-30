@@ -24,6 +24,8 @@
 					<x:forEach var="domain" items="${j.rows}">
 						<li><span><a href="viewUserKeyword?domainId=${domain.id}">${domain.domain_name}</a></span></li>
 					</x:forEach>
+						<li><a href="domainRequest">Domain Request</a></li>
+						<li><a href="viewDomainRequest">Domain Request History</a></li>
 						<!-- <li><a href="icons-material-icons.html">Material Design Icons</a></li>
 						<li><a href="icons-material-design-iconic.html">Material Design Iconic Font</a></li>
 						<li><a href="icons-themify-icons.html">Themify Icons</a></li> -->
