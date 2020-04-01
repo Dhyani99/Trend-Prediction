@@ -59,24 +59,17 @@
 							<thead>
 								<tr>
 									<th>No.</th>
+									<th>Total Patents Downloaded</th>
 									<th>Domain Name</th>
-									<th>Dataset Name</th>
-									<th>Dataset File Name</th>
-									<th>Dataset File Path</th>
-									<th>Dataset Description</th>
-									<th>Action</th>
 								</tr>
 							</thead>
 							<tbody>
  							<c:forEach var="i" items="${datasetList}" varStatus="j">
 								<tr>
 									<td>${j.count}</td>
+									<td>${i.totalPatents}</td>
 									<td>${i.domainVO.domainName}</td>
-									<td>${i.datasetName}</td>
-									<td>${i.fileName}</td>
-									<td>${i.filePath}</td>
-									<td>${i.datasetDescription}</td>
-									<td><a href="editDataset.html?id=${i.id}"><i class="menu-icon fa fa-edit" aria-hidden="true"></i></a><c:out value=" "></c:out>&nbsp&nbsp&nbsp&nbsp<a href="deleteDataset.html?id=${i.id}"><i class="menu-icon fa fa-trash-alt" aria-hidden="true"></i></a></td>
+									
 								</tr>
 							</c:forEach>
 							</tbody>

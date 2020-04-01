@@ -13,40 +13,36 @@
 <title>View Complain</title>
 <%@taglib prefix="c" uri="http://java.sun.com/jstl/core_rt" %>
 
-<!-- Main Styles -->
-<link rel="stylesheet" href="<%=request.getContextPath() %>/adminResource/css/style.min.css">
-<link rel="stylesheet" href="<%=request.getContextPath() %>/adminResource/css/custom.css">
-
-<!-- Themify Icon -->
-<link rel="stylesheet" href="<%=request.getContextPath() %>/adminResource/css/themify-icons.css">
-
-<!-- mCustomScrollbar -->
-<link rel="stylesheet"
-	href="<%=request.getContextPath() %>/adminResource/css/jquery.mCustomScrollbar.min.css">
-
-<!-- Waves Effect -->
-<link rel="stylesheet" href="<%=request.getContextPath() %>/adminResource/css/waves.min.css">
-
-<!-- Sweet Alert -->
-<link rel="stylesheet" href="<%=request.getContextPath() %>/adminResource/css/sweetalert.css">
-
-<!-- Data Tables -->
-<link rel="stylesheet"
-	href="<%=request.getContextPath() %>/adminResource/css/dataTables.bootstrap4.min.css">
-<link rel="stylesheet"
-	href="<%=request.getContextPath() %>/adminResource/css/responsive.bootstrap.min.css">
-
+	<!-- Main Styles -->
+	<link rel="stylesheet" href="<%=request.getContextPath() %>/adminResource/css/style.min.css">
+	<link rel="stylesheet" href="<%=request.getContextPath() %>/adminResource/css/custom.css">
+	
+	<!-- Themify Icon -->
+	<link rel="stylesheet" href="<%=request.getContextPath() %>/adminResource/css/themify-icons.css">
+	
+	<!-- mCustomScrollbar -->
+	<link rel="stylesheet"
+		href="<%=request.getContextPath() %>/adminResource/css/jquery.mCustomScrollbar.min.css">
+	
+	<!-- Waves Effect -->
+	<link rel="stylesheet" href="<%=request.getContextPath() %>/adminResource/css/waves.min.css">
+	
+	<!-- Sweet Alert -->
+	<link rel="stylesheet" href="<%=request.getContextPath() %>/adminResource/css/sweetalert.css">
+	
+	<!-- Data Tables -->
+	<link rel="stylesheet"
+		href="<%=request.getContextPath() %>/adminResource/css/dataTables.bootstrap4.min.css">
+	<link rel="stylesheet"
+		href="<%=request.getContextPath() %>/adminResource/css/responsive.bootstrap.min.css">
 </head>
-
 <body>
 	<jsp:include page="menu.jsp"></jsp:include>
-
 	<!-- /.main-menu -->
 
 	<jsp:include page="header.jsp"></jsp:include>
 	<!-- /.fixed-navbar -->
 
-	
 	<div id="wrapper">
 		<div class="main-content">
 			<div class="row small-spacing">
@@ -81,7 +77,6 @@
 									<td>${i.complainStatus}</td>
 								</tr>
 							</c:forEach>
-								
 							</tbody>
 						</table>
 					</div>

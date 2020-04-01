@@ -12,8 +12,10 @@ import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.servlet.ModelAndView;
 
 import com.tp.model.DatasetVO;
+import com.tp.model.DomainVO;
 import com.tp.model.KeywordCountVO;
 import com.tp.model.KeywordVO;
+import com.tp.model.KeywordYearwiseVO;
 import com.tp.service.KeywordService;
 import com.tp.service.DomainService;
 
@@ -34,6 +36,7 @@ public class KeywordController {
 		model.addAttribute("keywordVO",new KeywordVO());
 		return new ModelAndView("admin/addKeyword");
 	}
+	
 
 	@RequestMapping(value="admin/insertKeyword", method=RequestMethod.POST)
 	public ModelAndView insertKeyword(@ModelAttribute KeywordVO keywordVO)
@@ -49,7 +52,6 @@ public class KeywordController {
 		List keywordList=this.keywordService.viewKeyword();
 		return new ModelAndView("admin/viewKeyword","keywordList",keywordList);
 	}
-	
 	
 	
 	@RequestMapping(value="admin/editKeyword", method=RequestMethod.GET)
