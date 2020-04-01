@@ -9,7 +9,7 @@
 	<meta name="description" content="">
 	<meta name="author" content="">
 
-	<title>Home - SpaceX Template</title>
+	<title>Dashboard</title>
 	
 	<!-- Main Styles -->
 	<link rel="stylesheet" href="<%=request.getContextPath() %>/adminResource/css/style.min.css">
@@ -247,40 +247,7 @@
 				<!-- /.box-content -->
 			</div>
 			</c:forEach>
-			<!-- <div class="col-xl-4 col-lg-6 col-12">
-				<div class="box-content card bordered-all primary js__card card-closed">
-					<h4 class="box-title bg-primary with-control">
-						Card Title
-						<span class="controls">
-							<button type="button" class="control fa fa-minus js__card_minus"></button>
-							<button type="button" class="control fa fa-times js__card_remove"></button>
-						</span>
-						/.controls
-					</h4>
-					/.box-title
-					<div class="card-content js__card_content" style="display: none;">
-						<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Magni fugit facilis nulla repudiandae odit ipsam sit aliquam voluptatum quaerat quod ab molestiae, rem, nostrum perferendis ipsa nam doloribus dolorem explicabo!</p>
-					</div>
-				</div>
-				/.box-content
-			</div>
-			<div class="col-xl-4 col-lg-6 col-12">
-				<div class="box-content card bordered-all warning js__card card-closed">
-					<h4 class="box-title bg-warning with-control">
-						Card Title
-						<span class="controls">
-							<button type="button" class="control fa fa-minus js__card_minus"></button>
-							<button type="button" class="control fa fa-times js__card_remove"></button>
-						</span>
-						/.controls
-					</h4>
-					/.box-title
-					<div class="card-content js__card_content" style="display: none;">
-						<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Magni fugit facilis nulla repudiandae odit ipsam sit aliquam voluptatum quaerat quod ab molestiae, rem, nostrum perferendis ipsa nam doloribus dolorem explicabo!</p>
-					</div>
-				</div>
-				/.box-content
-			</div> -->
+			
 			</div>
 			<jsp:include page="footer.jsp"></jsp:include>
 	</div>

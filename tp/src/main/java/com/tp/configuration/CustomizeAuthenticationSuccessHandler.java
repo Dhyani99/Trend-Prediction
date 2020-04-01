@@ -40,7 +40,7 @@ public class CustomizeAuthenticationSuccessHandler implements AuthenticationSucc
 			response.sendRedirect("/admin/index");
 		} else if(user) {
 			System.out.println("user is user");
-			response.sendRedirect("/user/index");
+			response.sendRedirect("/user/dashboard");
 		}else {
 			System.out.println("user is anonymous");
 			response.sendRedirect("/403");

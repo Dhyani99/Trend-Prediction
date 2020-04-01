@@ -41,12 +41,12 @@ public class LoginController {
 		return new ModelAndView("admin/index");
 	}
 	
-	@RequestMapping(value = "/user/index", method = RequestMethod.GET)
+	/*@RequestMapping(value = "/user/index", method = RequestMethod.GET)
 	public ModelAndView userIndex() {
 
-		return new ModelAndView("user/index");
+		return new ModelAndView("user/dashboard");
 	}
-	
+	*/
 	@RequestMapping(value = "/logout", method = { RequestMethod.GET})	
 	public String viewUserDetails(ModelMap model,HttpServletResponse response,HttpServletRequest request) {
 

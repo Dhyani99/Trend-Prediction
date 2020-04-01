@@ -12,6 +12,7 @@ import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.servlet.ModelAndView;
 
 import com.tp.model.DatasetVO;
+import com.tp.model.KeywordCountVO;
 import com.tp.model.KeywordVO;
 import com.tp.service.KeywordService;
 import com.tp.service.DomainService;
@@ -87,6 +88,14 @@ public class KeywordController {
 		
 		List keywordList=this.keywordService.findTrendingKeywords(domainId);
 		return new ModelAndView("user/displayKeyword","keywordList",keywordList);
+	}
+	
+	@RequestMapping(value="user/viewGraph")
+	public ModelAndView viewGraph(@RequestParam String keywordName, @RequestParam int domainId, @ModelAttribute KeywordCountVO keywordCountVO)
+	{
+		//this.keywordService.insertKeyword()
+		List keywordList=this.keywordService.findCountYearwise(keywordName, domainId);
+		return new ModelAndView("user/graph","keywordList",keywordList);
 	}
 
 }

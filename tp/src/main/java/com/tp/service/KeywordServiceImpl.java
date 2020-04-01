@@ -7,6 +7,7 @@ import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
 import com.tp.dao.KeywordDAO;
+import com.tp.model.KeywordCountVO;
 import com.tp.model.KeywordVO;
 
 @Service
@@ -39,5 +40,15 @@ public class KeywordServiceImpl implements KeywordService{
 	public List findTrendingKeywords(int domainId)
 	{
 		return this.KeywordDAO.findTrendingKeywords(domainId);
+	}
+	
+	public List findCountYearwise(String keywordName, int domainId)
+	{
+		return this.KeywordDAO.findCountYearwise(keywordName,domainId);
+	}
+	
+	public void insertKeywordCount(KeywordCountVO keywordCountVO)
+	{
+		this.KeywordDAO.insertKeywordCount(keywordCountVO);
 	}
 }

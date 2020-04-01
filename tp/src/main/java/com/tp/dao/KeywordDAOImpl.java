@@ -8,6 +8,7 @@ import org.hibernate.SessionFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Repository;
 
+import com.tp.model.KeywordCountVO;
 import com.tp.model.KeywordVO;
 
 @Repository
@@ -58,11 +59,22 @@ public class KeywordDAOImpl implements KeywordDAO {
 	public List findTrendingKeywords(int domainId)
 	{
 		Session session = sessionFactory.openSession();
-		
 		Query q=session.createQuery("from KeywordYearwiseVO where domainVO.id="+domainId+" and year=2020 GROUP BY keyword, year ORDER BY count(frequency) DESC");
-		
 		List ls=q.list();
-
+		return ls;
+	}
+	
+	public void insertKeywordCount(KeywordCountVO keywordCountVO)
+	{
+		Session session = this.sessionFactory.getCurrentSession();
+		session.saveOrUpdate(keywordCountVO);
+	}
+	
+	public List findCountYearwise(String keywordName, int domainId)
+	{
+		Session session = sessionFactory.openSession();
+		Query q=session.createQuery("FROM KeywordCountVO WHERE keyword='"+keywordName+"' and domainVO.id='"+domainId+"'");
+		List ls=q.list();
 		return ls;
 	}
 

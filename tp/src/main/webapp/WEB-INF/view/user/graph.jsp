@@ -1,6 +1,32 @@
-<%@ page language="java" contentType="text/html; charset=ISO-8859-1"
-    pageEncoding="ISO-8859-1"%>
-<!DOCTYPE html>
+<%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8" isELIgnored="false"%>
+<%@ page import="java.util.*" %>
+<%@ page import="com.google.gson.Gson"%>
+<%@ page import="com.google.gson.JsonObject"%>
+
+<%
+	Gson gsonObj = new Gson();
+	Map<Object,Object> map = null;
+	List<Map<Object,Object>> list = new ArrayList<Map<Object,Object>>();
+%>
+<%@taglib prefix="c" uri="http://java.sun.com/jstl/core_rt" %>
+<c:forEach items="${keywordList}" var="i">
+<c:set var="year" value="${i.year}"></c:set>
+<c:set var="freq" value="${i.frequency}"></c:set>
+<c:set var="keyword" value="${i.keyword }"></c:set>
+
+<%
+	String year=(String)pageContext.getAttribute("year");
+	Integer freq=Integer.parseInt((String)pageContext.getAttribute("freq"));
+	map = new HashMap<Object,Object>(); 
+	map.put("label", year);
+	map.put("y", freq); 
+	list.add(map);
+	%>
+</c:forEach>
+<%
+	String dataPoints = gsonObj.toJson(list);
+%>
+<!DOCTYPE html> 
 <html lang="en">
 <head>
 	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
@@ -9,7 +35,7 @@
 	<meta name="description" content="">
 	<meta name="author" content="">
 
-	<title>Add Reply</title>
+	<title>Graph</title>
 
 	<!-- Main Styles -->
 	<link rel="stylesheet" href="<%=request.getContextPath() %>/adminResource/css/style.min.css">
@@ -26,6 +52,30 @@
 
 	<!-- Sweet Alert -->
 	<link rel="stylesheet" href="<%=request.getContextPath() %>/adminResource/css/sweetalert.css">
+	<script type="text/javascript">
+	window.onload = function() { 
+	 
+	var chart = new CanvasJS.Chart("chartContainer", {
+		theme: "light2",
+		title: {
+			text:"Yearwise Keyword Trend"
+		},
+		axisX: {
+			title: "Year"
+		},
+		axisY: {
+			title: "Keyword Frequency"
+		},
+		data: [{
+			type: "line",
+			yValueFormatString: "#,##0",
+			dataPoints : <%out.print(dataPoints);%>
+		}]
+	});
+	chart.render();
+	 
+	}
+</script>
 	
 </head>
 
@@ -36,31 +86,21 @@
 	<jsp:include page="header.jsp"></jsp:include>
 <!-- /.fixed-navbar -->
 
+
+
+
+<%@taglib prefix="f" uri="http://www.springframework.org/tags/form"%>
+<%@taglib prefix="c" uri="http://java.sun.com/jstl/core_rt"%>
 <div id="wrapper">
 	<div class="main-content">
 		<div class="row small-spacing">
 			<div class="col-12">
 				<div class="box-content">
-				<%@taglib prefix="f" uri="http://www.springframework.org/tags/form"%>
-					<f:form data-toggle="validator" action="insertReply" modelAttribute="complainVO" method="post">
-					<h1 class="page-title">ADD REPLY</h1>
+					<f:form data-toggle="validator" action="insertDataset" enctype="multipart/form-data" modelAttribute="datasetVO" method="post">
+						<h1 class="page-title">Graph for <%=(String)pageContext.getAttribute("keyword") %></h1>
 						<div class="form-group">
-							<label for="inputName" class="control-label">Complain Subject: </label>
-							<f:input path="complainSubject" class="form-control" id="inputName" placeholder="Enter complain subject" required="true" readonly="true"/>
-							<f:hidden path="id"/>
-						</div>
-						<div class="form-group">
-								<label for="inp-type-5" class="control-label">Complain Description: </label>
-								<f:textarea path="complainDescription" class="form-control" id="inp-type-5" placeholder="Enter complain description" readonly="true"/>
-						</div>
-						<div class="form-group">
-								<label for="inp-type-5" class="control-label">Reply: </label>
-								<f:textarea path="reply" class="form-control" id="inp-type-5" placeholder="Enter reply"/><br>
-								<f:hidden path="complainDate"/>
-								<f:hidden path="loginVO.loginId"/>
-						</div>
-						<div class="form-group">
-							<button type="submit" class="btn btn-primary waves-effect waves-light">Submit</button>
+							<div id="chartContainer" style="height: 370px; width: 100%;"></div>
+							<script src="https://canvasjs.com/assets/script/canvasjs.min.js"></script>
 						</div>
 					</f:form>
 				</div>

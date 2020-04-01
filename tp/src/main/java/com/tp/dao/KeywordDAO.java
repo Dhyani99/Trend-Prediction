@@ -2,6 +2,7 @@ package com.tp.dao;
 
 import java.util.List;
 
+import com.tp.model.KeywordCountVO;
 import com.tp.model.KeywordVO;
 
 public interface KeywordDAO {
@@ -15,4 +16,8 @@ public interface KeywordDAO {
 	public List findKeywordByDomain(int domainId);
 
 	public List findTrendingKeywords(int domainId);
+
+	public List findCountYearwise(String keywordName, int domainId);
+	
+	public void insertKeywordCount(KeywordCountVO keywordCountVO);
 }
