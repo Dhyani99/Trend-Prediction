@@ -93,7 +93,7 @@ public class KeywordController {
 	}
 	
 	@RequestMapping(value="user/viewGraph")
-	public ModelAndView viewGraph(@RequestParam String keywordName, @RequestParam int domainId, @ModelAttribute KeywordCountVO keywordCountVO)
+	public ModelAndView viewGraph(@RequestParam String keywordName, @RequestParam int domainId)
 	{
 		//this.keywordService.insertKeyword()
 		List keywordList=this.keywordService.findCountYearwise(keywordName, domainId);

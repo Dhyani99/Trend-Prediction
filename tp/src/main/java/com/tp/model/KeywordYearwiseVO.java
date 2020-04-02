@@ -34,16 +34,13 @@ public class KeywordYearwiseVO {
 	@Column(name="frequency")
 	private String frequency;
 	
-	@Column(name="status")
-	private boolean status=false;
-	
-	public boolean isStatus() {
-		return status;
-	}
-
-	public void setStatus(boolean status) {
-		this.status = status;
-	}
+	/*
+	 * @Column(name="status") private boolean status=false;
+	 * 
+	 * public boolean isStatus() { return status; }
+	 * 
+	 * public void setStatus(boolean status) { this.status = status; }
+	 */
 
 	public String getYear() {
 		return year;
