@@ -27,4 +27,10 @@ public class UserController {
 		return new ModelAndView("admin/viewUser","userList",users);
 	}
 	
+	@RequestMapping(value="/admin/viewLoggedInUser", method=RequestMethod.GET)
+	public ModelAndView viewLoggedInUser()
+	{
+		List users=this.loginService.searchUser();
+		return new ModelAndView("admin/viewUser","userList",users);
+	}
 }

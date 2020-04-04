@@ -35,4 +35,9 @@ public class LoginServiceImpl implements LoginService {
 		List ls = loginDAO.searchLoginID(loginService);
 		return ls;
 	}
+
+	@Override
+	public List searchUser() {
+		return loginDAO.searchUser();
+	}
 }

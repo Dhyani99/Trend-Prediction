@@ -10,7 +10,7 @@
 <meta name="description" content="">
 <meta name="author" content="">
 
-<title>View Dataset</title>
+<title>View Dataset Download History</title>
 <%@taglib prefix="c" uri="http://java.sun.com/jstl/core_rt" %>
 
 <!-- Main Styles -->
@@ -52,7 +52,7 @@
 			<div class="row small-spacing">
 				<div class="col-12">
 					<div class="box-content">
-						<h4 class="box-title">VIEW DATASET</h4>
+						<h4 class="box-title">VIEW DATASET DOWNLOAD HISTORY</h4>
 						<table id="example"
 							class="table table-striped table-bordered display"
 							style="width: 100%">
@@ -76,6 +76,8 @@
 						</table>
 					</div>
 					<!-- /.box-content -->
+					<jsp:include page="footer.jsp"></jsp:include>
+					
 				</div>
 				<!-- /.col-12 -->
 		<!--/#wrapper -->

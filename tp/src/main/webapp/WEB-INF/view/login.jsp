@@ -40,25 +40,13 @@
 					/.checkbox
 				</div>  -->
 				<!-- /.float-left -->
-				<div class="float-right"><a href="page-recoverpw.html" class="a-link"><i class="fa fa-unlock-alt"></i>Forgot password?</a></div>
+			<!-- 	<div class="float-right"><a href="page-recoverpw.html" class="a-link"><i class="fa fa-unlock-alt"></i>Forgot password?</a></div> -->
 				<!-- /.float-right -->
 			</div>
 			<!-- /.clearfix -->
 			<button type="submit" class="frm-submit">Login<i class="fa fa-arrow-circle-right"></i></button>
 			
-			<!-- <div class="row small-spacing">
-				<div class="col-md-12">
-					<div class="txt-login-with txt-center">or login with</div>
-					/.txt-login-with
-				</div>
-				/.col-md-12
-				<div class="col-md-6"><button type="button" class="btn btn-sm btn-icon btn-icon-left btn-social-with-text btn-facebook text-white waves-effect waves-light"><i class="ico fa fa-facebook"></i><span>Facebook</span></button></div>
-				/.col-md-6
-				<div class="col-md-6"><button type="button" class="btn btn-sm btn-icon btn-icon-left btn-social-with-text btn-google-plus text-white waves-effect waves-light"><i class="ico fa fa-google-plus"></i>Google+</button></div>
-				/.col-md-6
-			</div> -->
 			
-			<!-- /.row -->
 			<a href="register" class="a-link"><i class="fa fa-key"></i>New User? Register.</a>
 			<div class="frm-footer"></div>
 			<!-- /.footer -->

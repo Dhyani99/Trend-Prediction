@@ -39,7 +39,7 @@ public class FeedbackController {
 		List userList=loginService.searchLoginID(user);
 		feedbackVO.setLoginVO((LoginVO)userList.get(0));
 		this.feedbackService.insertFeedback(feedbackVO);
-		return new ModelAndView("redirect:/user/index");
+		return new ModelAndView("redirect:/user/dashboard");
 	}
 	
 	@RequestMapping(value="/admin/viewFeedback")

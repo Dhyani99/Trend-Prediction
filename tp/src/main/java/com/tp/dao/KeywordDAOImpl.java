@@ -50,7 +50,8 @@ public class KeywordDAOImpl implements KeywordDAO {
 		
 		Session session = sessionFactory.openSession();
 		
-		Query q=session.createQuery("from KeywordYearwiseVO where domainVO.id="+domainId+" order by frequency DESC");
+		//Query q=session.createQuery("from KeywordYearwiseVO where domainVO.id="+domainId+" order by frequency DESC");
+		Query q=session.createQuery("from KeywordCountVO where domainVO.id="+domainId+" order by frequency DESC");
 		//SELECT keyword, YEAR, COUNT(COUNT) FROM keyword_yearwise WHERE YEAR=2020 GROUP BY keyword, YEAR ORDER BY COUNT(COUNT) DESC LIMIT 30;
 		//SELECT keyword, YEAR, COUNT(COUNT) FROM keywordyearwise GROUP BY keyword, YEAR;
 		List ls=q.list();

@@ -49,7 +49,7 @@
 					<f:form data-toggle="validator" action="insertDatasetDownload" enctype="multipart/form-data" modelAttribute="datasetDownloadVO" method="post">
 						<h1 class="page-title">DOWNLOAD DATASET</h1>
 						<div class="form-group">
-						<p>Domain</p>
+						<label for="inputName" class="control-label">Domain</label>
 							<f:select path="domainVO.id" class="form-control select2_1 select2-hidden-accessible" tabindex="-1" aria-hidden="true" placeholder="Select Domain">
 						
 							<optgroup label="Select Domain">

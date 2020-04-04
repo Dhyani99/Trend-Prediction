@@ -7,7 +7,7 @@
 		<div class="ico-item">
 			<i class="ti-user"></i>
 			<ul class="sub-ico-item">
-				<li><a href="#">Edit profile</a></li>
+				<!-- <li><a href="#">Edit profile</a></li> -->
 				<li><a  href="/logout">Log Out</a></li>
 			</ul>
 			<!-- /.sub-ico-item -->

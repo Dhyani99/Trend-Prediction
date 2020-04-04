@@ -63,7 +63,6 @@
 									<th>First Name</th>
 									<th>Last Name</th>
 									<th>Contact Number</th>
-									<th>User ID</th>
 									<th>Action</th>
 								</tr>
 								
@@ -83,7 +82,6 @@
 									<td>${i.firstName}</td>
 									<td>${i.lastName}</td>
 									<td>${i.contactNumber}</td>
-									<td>${i.loginVO.loginId}</td>
 									<td>
 									<label class="switch">
 											<input onclick="toggleUser(${i.loginVO.loginId},this.checked)"
@@ -97,6 +95,7 @@
 						</table>
 					</div>
 					<!-- /.box-content -->
+					<jsp:include page="footer.jsp"></jsp:include>
 				</div>
 				<!-- /.col-12 -->
 		<!--/#wrapper -->

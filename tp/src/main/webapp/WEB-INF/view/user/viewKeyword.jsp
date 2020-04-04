@@ -53,20 +53,7 @@
 					<div class="box-content">
 						<h4 class="box-title">Default</h4>
 						<!-- /.box-title -->
-						<div class="dropdown js__drop_down">
-							<a href="#"
-								class="dropdown-icon glyphicon glyphicon-option-vertical js__drop_down_button"></a>
-							<ul class="sub-menu">
-								<li><a href="#">Action</a></li>
-								<li><a href="#">Another action</a></li>
-								<li><a href="#">Something else there</a></li>
-								<li class="split"></li>
-								<li><a href="#">Separated link</a></li>
-							</ul>
-							<!-- /.sub-menu -->
-						</div>
-						<!-- /.dropdown js__dropdown -->
-						<table id="example"
+							<table id="example"
 							class="table table-striped table-bordered display"
 							style="width: 100%">
 							<thead>
@@ -75,7 +62,6 @@
 									<th>Keyword Name</th>
 									<th>Year</th>
 									<th>Frequency</th>
-									<th>Patent Number</th>
 									<th>Domain Name</th>
 								</tr>
 								
@@ -88,7 +74,6 @@
 									<td>${i.keyword}</td>
 									<td>${i.year}</td>
 									<td>${i.frequency}</td>
-									<td>${i.patent}</td>
 									<td>${i.domainVO.domainName}</td>
 									<%-- <td><a href="editKeyword.html?id=${i.id}"><i class="menu-icon fa fa-edit" aria-hidden="true"></i></a><c:out value=" "></c:out>&nbsp&nbsp&nbsp&nbsp<a href="deleteKeyword.html?id=${i.id}"><i class="menu-icon fa fa-trash-alt" aria-hidden="true"></i></a></td> --%>
 								</tr>
@@ -97,7 +82,12 @@
 						</table>
 					</div>
 					<!-- /.box-content -->
+					<jsp:include page="footer.jsp"></jsp:include>
+				
 				</div>
+			</div>
+		</div>
+    </div>
 				<!-- /.col-12 -->
 		<!--/#wrapper -->
 	<!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->

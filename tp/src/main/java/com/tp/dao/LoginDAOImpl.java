@@ -36,4 +36,11 @@ public class LoginDAOImpl implements LoginDAO {
 		List ls = q.list();
 		return ls;
 	}
+		public List searchUser() {
+			// TODO Auto-generated method stub
+			Session session = sessionFactory.openSession();
+			Query q=session.createQuery("from LoginVO where status=true and role='ROLE_USER'");
+			List users=q.list();
+			return users;
+	}
 }

@@ -62,7 +62,7 @@
 									<th>No.</th>
 									<th>Feedback</th>
 									<th>Rating</th>
-									<th>Login Id</th>									
+									<th>User email</th>									
 								</tr>
 							</thead>
 							<tbody> 
@@ -71,13 +71,14 @@
 									<td>${j.count}</td>
 									<td>${i.feedback}</td>
 									<td>${i.rating} </td>
-									<td>${i.loginVO.loginId}</td>
+									<td>${i.loginVO.username}</td>
 								</tr>
 							</c:forEach>
 							</tbody>
 						</table>
 					</div>
 					<!-- /.box-content -->
+					<jsp:include page="footer.jsp"></jsp:include>
 				</div>
 				<!-- /.col-12 -->
 		<!--/#wrapper -->

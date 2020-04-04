@@ -79,6 +79,7 @@
 						</table>
 					</div>
 					<!-- /.box-content -->
+					<jsp:include page="footer.jsp"></jsp:include>
 				</div>
 				<!-- /.col-12 -->
 		<!--/#wrapper -->

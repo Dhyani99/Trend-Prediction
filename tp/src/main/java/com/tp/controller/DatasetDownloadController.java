@@ -59,7 +59,7 @@ public class DatasetDownloadController {
 		System.out.println(datasetDownloadVO.getDomainVO().getDomainName());
 		//this.datasetDownloadService.getPatentNumber(domainName);
 		this.datasetDownloadService.insertDatasetDownload(datasetDownloadVO,totalPatents);
-		return new ModelAndView("redirect:/admin/viewDataset");
+		return new ModelAndView("redirect:/admin/viewDatasetDownload");
 	}
 	
 	@RequestMapping(value="/viewDatasetDownload")
