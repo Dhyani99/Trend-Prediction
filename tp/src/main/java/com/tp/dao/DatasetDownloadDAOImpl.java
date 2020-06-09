@@ -30,9 +30,9 @@ public class DatasetDownloadDAOImpl implements DatasetDownloadDAO
 	{
 		String domainName=datasetDownloadVO.getDomainVO().getDomainName();
 		System.out.println(domainName);
-		int count = 50001;
+		int count = 50051;
 		int x=totalPatents/50;
-		int begin=10001;
+		int begin=1;
 		for (int k = begin; k < (begin+x); k++) {
 			String url = "http://patft.uspto.gov/netacgi/nph-Parser?Sect1=PTO2&Sect2=HITOFF&p="
 					+k+ "&u=%2Fnetahtml%2FPTO%2Fsearch-bool.html&r=0&f=S&l=50&TERM1="+ domainName +"&FIELD1=&co1=AND&TERM2=&FIELD2=&d=PTXT";

@@ -48,9 +48,9 @@ public class ComplainController {
 		String fileName = file.getOriginalFilename();
 		try {
 			byte[] b = file.getBytes();
-			Path path = Paths.get(UPLOAD_FOLDER + file.getOriginalFilename());
+			Path path = Paths.get(UPLOAD_FOLDER + fileName);
 
-			BufferedOutputStream bufferedOutputStream = new BufferedOutputStream(new FileOutputStream(path+fileName));
+			BufferedOutputStream bufferedOutputStream = new BufferedOutputStream(new FileOutputStream(path.toString()));
 			
 			bufferedOutputStream.write(b);
 			complainVO.setStatus(true);
